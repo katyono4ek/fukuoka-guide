@@ -1,0 +1,48 @@
+{
+  "id": "phrases",
+  "ornament": "✿",
+  "layout": "notes",
+  "locales": ["en"],
+  "title": { "en": "Six useful sentences" },
+  "intro": {
+    "en": "English is limited outside hotels, but goodwill is not. These six carry most of a trip — and the local dialect, Hakata-ben, is softer and friendlier than textbook Japanese."
+  },
+  "items": [
+    {
+      "id": "p1",
+      "name": { "en": "Sumimasen" },
+      "meta": { "en": "すみません" },
+      "text": { "en": "Excuse me / sorry / may I have your attention. The single most useful word in Japan; say it before everything else." }
+    },
+    {
+      "id": "p2",
+      "name": { "en": "Kore o kudasai" },
+      "meta": { "en": "これをください" },
+      "text": { "en": "\"This one, please\" — point at the menu, the display case or the plastic food model. Nobody minds pointing." }
+    },
+    {
+      "id": "p3",
+      "name": { "en": "Kaedama onegaishimasu" },
+      "meta": { "en": "替玉お願いします" },
+      "text": { "en": "\"Extra noodles, please\", for when your ramen bowl still has broth in it. A local move, and always well received." }
+    },
+    {
+      "id": "p4",
+      "name": { "en": "Osusume wa nan desu ka" },
+      "meta": { "en": "おすすめはなんですか" },
+      "text": { "en": "\"What do you recommend?\" At a yatai or a small izakaya this is the best order you can make." }
+    },
+    {
+      "id": "p5",
+      "name": { "en": "Gochisousama deshita" },
+      "meta": { "en": "ごちそうさまでした" },
+      "text": { "en": "\"Thank you for the meal\", said on the way out. It lands warmly, especially with an older cook." }
+    },
+    {
+      "id": "p6",
+      "name": { "en": "Yoka yo / Ikin yo" },
+      "meta": { "en": "よかよ / いきんよ" },
+      "text": { "en": "Hakata dialect for \"it's fine\" and \"no need\". You will hear them constantly; using one gets you a smile." }
+    }
+  ]
+}

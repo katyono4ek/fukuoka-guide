@@ -1,0 +1,101 @@
+{
+  "id": "neighbourhoods",
+  "ornament": "❀",
+  "layout": "cards",
+  "filterable": true,
+  "title": { "en": "Where to wander", "ja": "歩きたいエリア" },
+  "intro": {
+    "en": "The city has two hearts — Hakata, where the trains and the ramen are, and Tenjin, where the shopping and the nightlife are. Everything else is a short ride from one of them.",
+    "ja": "福岡の中心はふたつ。電車とラーメンの博多、買いものと夜の天神。ほかのエリアも、そのどちらかからすぐです。"
+  },
+  "items": [
+    {
+      "id": "hakata",
+      "name": { "en": "Hakata", "ja": "博多" },
+      "meta": { "en": "Arrival, ramen, old temples", "ja": "到着・ラーメン・古い寺町" },
+      "text": {
+        "en": "The station is a city in itself — ten floors of food and a rooftop garden shrine. Walk ten minutes west and you are in Hakata Old Town, a quiet grid of temples that survived six centuries of merchants.",
+        "ja": "博多駅はそれ自体がひとつの街。グルメフロアが何層も重なり、屋上には小さな庭と神社があります。西へ10分歩けば、商人の町の名残が残る静かな寺町「博多旧市街」です。"
+      },
+      "tags": ["hakata", "shopping"],
+      "map": "Hakata Station, Fukuoka"
+    },
+    {
+      "id": "tenjin",
+      "name": { "en": "Tenjin", "ja": "天神" },
+      "meta": { "en": "Department stores and an underground city", "ja": "デパートと地下街" },
+      "text": {
+        "en": "Fukuoka's shopping core, with a 600-metre underground arcade beneath it — stained glass, dark wood, sixteen blocks of shops. A perfect rainy afternoon, and the fastest way to cross the district dry.",
+        "ja": "福岡の買いものの中心。地下には約600メートルの天神地下街が伸び、ステンドグラスと落ち着いた木目の通りに店が並びます。雨の日の午後にぴったり、しかも濡れずに移動できます。"
+      },
+      "tags": ["tenjin", "shopping", "rainy"],
+      "map": "Tenjin Chikagai, Fukuoka"
+    },
+    {
+      "id": "daimyo",
+      "name": { "en": "Daimyo", "ja": "大名" },
+      "meta": { "en": "Vintage shops, small coffee", "ja": "古着と小さなコーヒー" },
+      "text": {
+        "en": "Narrow lanes behind Tenjin filled with second-hand clothing, one-room boutiques, barbers and coffee stands. The best browsing in the city, and almost all of it on foot.",
+        "ja": "天神の裏手にひろがる細い路地。古着屋、ひと部屋のセレクトショップ、理容室、コーヒースタンド。市内でいちばん「見るのが楽しい」エリアで、すべて歩いて回れます。"
+      },
+      "tags": ["tenjin", "shopping", "photogenic"],
+      "map": "Daimyo, Chuo Ward, Fukuoka"
+    },
+    {
+      "id": "yakuin",
+      "name": { "en": "Yakuin & Kego", "ja": "薬院・警固" },
+      "meta": { "en": "Where locals eat", "ja": "地元の人が食べに行く場所" },
+      "text": {
+        "en": "One stop south of Tenjin and noticeably calmer: bakeries, wine bars, flower shops and the kind of restaurant with eight seats and no English menu. Come for dinner rather than sightseeing.",
+        "ja": "天神のひと駅南、空気がすこし落ち着きます。パン屋、ワインバー、花屋、そして席が8つしかない英語メニューのない店。観光というより、夕食のために来るエリアです。"
+      },
+      "tags": ["tenjin", "quiet", "evening"],
+      "map": "Yakuin, Chuo Ward, Fukuoka"
+    },
+    {
+      "id": "ohori",
+      "name": { "en": "Ohori & Akasaka", "ja": "大濠・赤坂" },
+      "meta": { "en": "A lake, a ruined castle, an art museum", "ja": "池・城跡・美術館" },
+      "text": {
+        "en": "A two-kilometre loop around a former castle moat, now a park with a Japanese garden, a teahouse island and joggers at every hour. The castle ruins and the cherry trees of Maizuru are on the other side of the road.",
+        "ja": "かつての城の外堀をめぐる約2キロの周遊路。日本庭園、浮島の茶屋、そして一日中絶えないランナー。道をはさんだ向かいは福岡城跡と、桜の舞鶴公園です。"
+      },
+      "tags": ["ohori", "free", "quiet", "morning"],
+      "map": "Ohori Park, Fukuoka"
+    },
+    {
+      "id": "nakasu",
+      "name": { "en": "Nakasu & Nakagawa", "ja": "中洲・那珂川" },
+      "meta": { "en": "Neon on the water", "ja": "川面のネオン" },
+      "text": {
+        "en": "A sandbank island between two channels of the river, the densest nightlife in western Japan, and a riverside promenade where the yatai set up at dusk. Pretty from the bridges, loud inside.",
+        "ja": "川の中洲にできた、西日本でもっとも濃い繁華街。夕暮れには川沿いに屋台が並びます。橋の上から眺めるときれい、なかに入るとにぎやかです。"
+      },
+      "tags": ["hakata", "evening", "photogenic"],
+      "map": "Nakasu, Hakata Ward, Fukuoka"
+    },
+    {
+      "id": "momochi",
+      "name": { "en": "Momochi & Seaside", "ja": "百道・シーサイド" },
+      "meta": { "en": "Beach inside the city limits", "ja": "市内にある砂浜" },
+      "text": {
+        "en": "A planned waterfront west of the centre: an artificial beach, a 234-metre tower clad in mirrors, and the best sunset in Fukuoka. Twenty minutes by bus from Tenjin.",
+        "ja": "中心部の西につくられたウォーターフロント。人工海浜、鏡張りの高さ234メートルの福岡タワー、そして市内随一の夕景。天神からバスで20分ほどです。"
+      },
+      "tags": ["seaside", "photogenic", "evening"],
+      "map": "Momochi Seaside Park, Fukuoka"
+    },
+    {
+      "id": "kawabata",
+      "name": { "en": "Kawabata arcade", "ja": "川端商店街" },
+      "meta": { "en": "400 metres of covered shopping", "ja": "約400メートルのアーケード" },
+      "text": {
+        "en": "Fukuoka's oldest shopping street, roofed end to end: sweet shops, kimono fabric, a stall selling the local zenzai red-bean soup, and a festival float on permanent display halfway down.",
+        "ja": "福岡でいちばん古い商店街。端から端まで屋根があり、菓子屋、呉服、名物のぜんざい、そして途中には飾り山笠が一年中立っています。"
+      },
+      "tags": ["hakata", "rainy", "shopping"],
+      "map": "Kawabata Shopping Arcade, Fukuoka"
+    }
+  ]
+}

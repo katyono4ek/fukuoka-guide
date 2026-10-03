@@ -1,0 +1,79 @@
+{
+  "id": "cafes",
+  "ornament": "❁",
+  "layout": "cards",
+  "filterable": true,
+  "title": { "en": "Coffee & sweet things", "ja": "コーヒーと甘いもの" },
+  "intro": {
+    "en": "Fukuoka takes coffee seriously in a very unshowy way — roasteries in residential lanes, stands the size of a wardrobe, and fruit parlours that treat a strawberry like a jewel.",
+    "ja": "福岡のコーヒーは、派手さのないまじめさ。住宅街の焙煎所、クローゼットほどの小さなスタンド、そしていちごを宝石のように扱うフルーツパーラー。"
+  },
+  "items": [
+    {
+      "id": "roasteries",
+      "name": { "en": "The roastery circuit", "ja": "焙煎所めぐり" },
+      "meta": { "en": "Yakuin, Kego, Hirao", "ja": "薬院・警固・平尾" },
+      "text": {
+        "en": "Walk south from Tenjin and you pass a roastery every few blocks — espresso bars that compete nationally, filter-only counters, bean shops with three stools. No reservations, no queue culture, just sit down.",
+        "ja": "天神から南へ歩くと、数ブロックごとに焙煎所があります。全国大会に出るエスプレッソバー、ハンドドリップだけの店、椅子が三つの豆屋。予約も行列文化もなく、ただ座るだけです。"
+      },
+      "tags": ["tenjin", "quiet", "morning"],
+      "map": "coffee roastery Yakuin Fukuoka"
+    },
+    {
+      "id": "parfait",
+      "name": { "en": "Fruit parfait parlours", "ja": "フルーツパーラー" },
+      "meta": { "en": "Best just after opening", "ja": "開店直後がねらい目" },
+      "text": {
+        "en": "Tall glasses layered with seasonal fruit, cream and jelly, built in front of you. Strawberry from winter to spring, peach and muscat in summer, fig in autumn. Expect a wait at weekends.",
+        "ja": "季節の果物とクリーム、ジュレを重ねた背の高いグラスが、目の前で組み立てられます。冬から春はいちご、夏は桃とマスカット、秋はいちじく。週末は待つ覚悟で。"
+      },
+      "tags": ["sweet", "tenjin", "photogenic"],
+      "map": "fruit parfait Fukuoka"
+    },
+    {
+      "id": "depachika",
+      "name": { "en": "Department-store basements", "ja": "デパ地下" },
+      "meta": { "en": "Hakata & Tenjin", "ja": "博多・天神" },
+      "text": {
+        "en": "The sweetest half hour in the city: pastry counters, seasonal wagashi, mentaiko stalls and sample trays. Go an hour before closing, when the fresh boxes are marked down.",
+        "ja": "市内でいちばん甘い30分。洋菓子のカウンター、季節の和菓子、明太子の売り場、そして試食。閉店1時間前には生菓子が値引きされます。"
+      },
+      "tags": ["sweet", "rainy", "shopping", "hakata"],
+      "map": "Hakata Hankyu depachika, Fukuoka"
+    },
+    {
+      "id": "kissaten",
+      "name": { "en": "Old kissaten", "ja": "昔ながらの喫茶店" },
+      "meta": { "en": "Velvet seats, siphon coffee", "ja": "ベロアの椅子とサイフォン" },
+      "text": {
+        "en": "Pre-1980s coffee houses survive in the arcades and side streets: dark wood, velvet booths, a thick slice of toast and coffee made by siphon. Usually run by one person who has done this for forty years.",
+        "ja": "アーケードや路地には、昭和の喫茶店が残っています。濃い木の内装、ベロアのソファ、分厚いトースト、サイフォンのコーヒー。40年同じことを続けている店主がひとりで切り盛りしています。"
+      },
+      "tags": ["quiet", "rainy", "photogenic"],
+      "map": "kissaten Fukuoka"
+    },
+    {
+      "id": "coast-cafes",
+      "name": { "en": "Coast cafés of Itoshima", "ja": "糸島の海辺のカフェ" },
+      "meta": { "en": "40 min west", "ja": "西へ40分" },
+      "text": {
+        "en": "A string of wooden cafés along the Itoshima shoreline, most with a terrace facing straight into the sunset, some with a swing on the sand. Rent a bicycle at Chikuzen-Maebaru station and follow the water.",
+        "ja": "糸島の海岸線に、木づくりのカフェが点々と続きます。多くは夕日に向いたテラス付き、砂浜にブランコがある店も。筑前前原駅で自転車を借りて、海沿いに走るのがおすすめです。"
+      },
+      "tags": ["seaside", "nearby", "photogenic", "evening"],
+      "map": "Itoshima seaside cafe, Fukuoka"
+    },
+    {
+      "id": "zenzai",
+      "name": { "en": "Zenzai in Kawabata", "ja": "川端ぜんざい" },
+      "meta": { "en": "Inside the arcade", "ja": "商店街のなか" },
+      "text": {
+        "en": "Hot sweet red-bean soup with a grilled rice cake, served from a corner of the Kawabata arcade beside a towering festival float. Open on limited days — look for the queue of grandmothers.",
+        "ja": "焼きもちの入った温かいぜんざい。川端商店街の一角、飾り山笠のそばでいただけます。営業日が限られているので、おばあちゃんたちの列を目印に。"
+      },
+      "tags": ["sweet", "hakata", "rainy"],
+      "map": "Kawabata Zenzai Hiroba, Fukuoka"
+    }
+  ]
+}

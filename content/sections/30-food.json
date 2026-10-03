@@ -1,0 +1,112 @@
+{
+  "id": "food",
+  "ornament": "✾",
+  "layout": "cards",
+  "filterable": true,
+  "title": { "en": "What to eat", "ja": "食べたいもの" },
+  "intro": {
+    "en": "Fukuoka is the reason people fly to Kyushu. Pork-bone broth, a river of food stalls, and strawberries so good they have their own brand names.",
+    "ja": "人が九州まで足をのばす理由は、だいたい食べものです。豚骨のスープ、川沿いに並ぶ屋台、そしてブランド名を持つほど甘いいちご。"
+  },
+  "items": [
+    {
+      "id": "hakata-ramen",
+      "name": { "en": "Hakata ramen", "ja": "博多ラーメン" },
+      "meta": { "en": "Thin noodles, milky tonkotsu", "ja": "細麺・白濁した豚骨" },
+      "text": {
+        "en": "Straight thin noodles in a pork-bone broth boiled for hours. Order them katame (firm), and when the bowl is half empty ask for kaedama — a second portion of noodles, usually for a coin or two.",
+        "ja": "何時間も炊いた豚骨スープに、まっすぐな細麺。麺は「かため」で注文して、半分食べたら「替玉」を。たいてい100円ほどで麺のおかわりができます。"
+      },
+      "tags": ["savoury", "hakata"],
+      "map": "Hakata ramen, Fukuoka"
+    },
+    {
+      "id": "yatai",
+      "name": { "en": "Yatai food stalls", "ja": "屋台" },
+      "meta": { "en": "From dusk until late", "ja": "夕暮れから深夜まで" },
+      "text": {
+        "en": "Around a hundred of Japan's remaining street-food stalls are here — folding stools under a tarpaulin, ten seats, a menu of ramen, grilled skewers and oden. The Nakasu riverside row is the famous one; Tenjin's are quieter and often friendlier.",
+        "ja": "日本に残る屋台の多くが福岡にあります。ビニール越しの折りたたみ椅子、席は10ほど、ラーメンに焼き鳥におでん。有名なのは中洲の川沿い。天神の屋台のほうが静かで、話しかけやすいこともあります。"
+      },
+      "tags": ["evening", "savoury", "hakata", "photogenic"],
+      "map": "Nakasu Yatai, Fukuoka"
+    },
+    {
+      "id": "motsunabe",
+      "name": { "en": "Motsunabe", "ja": "もつ鍋" },
+      "meta": { "en": "Winter, shared, two broths", "ja": "冬・みんなで・2種のスープ" },
+      "text": {
+        "en": "A hotpot of beef offal, mountains of cabbage and garlic chives, in either soy or miso broth. Finish with champon noodles dropped into what's left. Best with other people and cold beer.",
+        "ja": "牛もつにキャベツとニラを山ほど、しょうゆか味噌のスープで。締めは残ったスープにちゃんぽん麺。人数がいるほどおいしく、ビールが合います。"
+      },
+      "tags": ["savoury", "evening"],
+      "map": "Motsunabe, Fukuoka"
+    },
+    {
+      "id": "mizutaki",
+      "name": { "en": "Mizutaki", "ja": "水炊き" },
+      "meta": { "en": "The gentle hotpot", "ja": "やさしい鍋" },
+      "text": {
+        "en": "Chicken simmered until the broth turns cloudy and sweet, served first as a cup of soup, then with vegetables and tofu. Fukuoka's quiet answer to motsunabe, and the better choice if you dislike offal.",
+        "ja": "鶏を白く濁るまで炊いたスープを、まず一杯そのままいただき、それから野菜や豆腐を。もつ鍋のにぎやかさに対する、静かな福岡の名物です。"
+      },
+      "tags": ["savoury", "evening", "quiet"],
+      "map": "Mizutaki, Fukuoka"
+    },
+    {
+      "id": "mentaiko",
+      "name": { "en": "Mentaiko", "ja": "明太子" },
+      "meta": { "en": "Spicy cod roe, on everything", "ja": "辛子めんたいこ、なんにでも" },
+      "text": {
+        "en": "Marinated pollock roe, Fukuoka's signature souvenir and the thing locals put on rice, baguettes, pasta and potatoes. Buy the chilled kind at the station if you're flying home soon; the tube paste travels better.",
+        "ja": "福岡の代表的なおみやげ。ご飯にもバゲットにもパスタにもじゃがいもにも。すぐ帰るなら駅で冷蔵のものを、持ち歩くならチューブタイプが安心です。"
+      },
+      "tags": ["savoury", "hakata", "shopping"],
+      "map": "Mentaiko shop, Hakata Station"
+    },
+    {
+      "id": "udon",
+      "name": { "en": "Hakata udon", "ja": "博多うどん" },
+      "meta": { "en": "Soft noodles, burdock fritter", "ja": "やわらかい麺とごぼ天" },
+      "text": {
+        "en": "Fukuoka claims to be where udon entered Japan, and its noodles are deliberately soft rather than chewy. Order gobo-ten: a fritter of sliced burdock root that slowly dissolves into the broth.",
+        "ja": "うどん伝来の地を名のる福岡の麺は、コシよりやわらかさ。注文は「ごぼ天」で。薄切りごぼうの天ぷらが、少しずつ出汁に溶けていきます。"
+      },
+      "tags": ["savoury", "morning"],
+      "map": "Hakata udon, Fukuoka"
+    },
+    {
+      "id": "goma-saba",
+      "name": { "en": "Goma saba", "ja": "ごまさば" },
+      "meta": { "en": "Raw mackerel, sesame, soy", "ja": "生のさばをごまじょうゆで" },
+      "text": {
+        "en": "Mackerel is eaten raw here — close enough to the fishing grounds that it arrives the same day — dressed in sesame and soy. An izakaya order, not a restaurant one.",
+        "ja": "漁場が近いため、福岡ではさばを生で食べます。ごまとしょうゆで和えた一皿。レストランではなく、居酒屋で頼むものです。"
+      },
+      "tags": ["savoury", "evening"],
+      "map": "Izakaya Fukuoka"
+    },
+    {
+      "id": "amaou",
+      "name": { "en": "Amaou strawberries", "ja": "あまおう" },
+      "meta": { "en": "December–April", "ja": "12〜4月" },
+      "text": {
+        "en": "Fukuoka's own strawberry variety: large, deep red, almost too sweet. In season the department-store basements build whole parfaits around them, and the fruit parlours fill up by noon.",
+        "ja": "福岡生まれのいちご。大きく、濃い赤で、甘さがはっきりしています。旬にはデパ地下がパフェをつくり、フルーツパーラーは昼前に満席になります。"
+      },
+      "tags": ["sweet", "tenjin"],
+      "map": "Amaou strawberry parfait, Fukuoka"
+    },
+    {
+      "id": "hakata-sweets",
+      "name": { "en": "Hakata sweet boxes", "ja": "博多のお菓子" },
+      "meta": { "en": "Souvenirs that survive a flight", "ja": "持ち帰れるおみやげ" },
+      "text": {
+        "en": "Buttery white-bean cakes, soft marshmallow-and-yolk confections, cream-filled shells — the station and airport sell them in gift boxes designed for exactly this. Pick two, share one on the plane.",
+        "ja": "白あんのバター菓子、マシュマロと黄身のやわらかい一口菓子、クリーム入りの生菓子。駅や空港には、まさにおみやげ用の箱が並びます。ふたつ買って、ひとつは機内で。"
+      },
+      "tags": ["sweet", "shopping", "hakata"],
+      "map": "Hakata souvenir sweets, Hakata Station"
+    }
+  ]
+}

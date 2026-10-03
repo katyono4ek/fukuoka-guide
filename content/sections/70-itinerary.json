@@ -1,0 +1,96 @@
+{
+  "id": "itinerary",
+  "ornament": "✾",
+  "layout": "timeline",
+  "title": { "en": "Three soft days", "ja": "やさしい3日間" },
+  "intro": {
+    "en": "One possible shape for a first visit. Nothing here is more than 25 minutes from anything else, so swap freely — the weather should decide, not the plan.",
+    "ja": "はじめての福岡のための、ひとつの案です。どこも互いに25分以内なので、入れ替えは自由に。決めるのは計画ではなく、その日の天気で。"
+  },
+  "items": [
+    {
+      "id": "day1",
+      "name": { "en": "Day one — the old town", "ja": "1日目 — 旧市街" },
+      "meta": { "en": "Hakata · Nakasu · mostly walking", "ja": "博多・中洲・ほぼ徒歩" },
+      "steps": [
+        {
+          "time": { "en": "Morning", "ja": "午前" },
+          "text": {
+            "en": "Leave your bag at the station lockers. Walk to Sumiyoshi Shrine, then north through Hakata Old Town to Tochoji and Kushida Shrine. Udon with gobo-ten for an early lunch.",
+            "ja": "荷物は駅のロッカーへ。住吉神社から博多旧市街を北へ、東長寺と櫛田神社。早めの昼食はごぼ天うどん。"
+          }
+        },
+        {
+          "time": { "en": "Afternoon", "ja": "午後" },
+          "text": {
+            "en": "The Kawabata arcade end to end, zenzai if it's open, then Canal City for the fountain on the hour. Coffee somewhere small before the light goes.",
+            "ja": "川端商店街を端から端まで、やっていればぜんざいを。キャナルシティで毎時の噴水を見て、暗くなる前にどこか小さな店でコーヒー。"
+          }
+        },
+        {
+          "time": { "en": "Evening", "ja": "夜" },
+          "text": {
+            "en": "Cross to the Nakasu riverside at dusk and pick a yatai with a free stool — the one with the shortest queue is rarely the worst. Ramen, a skewer, one beer.",
+            "ja": "夕暮れに中洲の川沿いへ。空いている椅子のある屋台を選びます。列が短い店が悪い店とは限りません。ラーメン、串もの、ビール一杯。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "day2",
+      "name": { "en": "Day two — water and flowers", "ja": "2日目 — 水と花" },
+      "meta": { "en": "Ohori · Momochi · one bus", "ja": "大濠・百道・バス1本" },
+      "steps": [
+        {
+          "time": { "en": "Morning", "ja": "午前" },
+          "text": {
+            "en": "Walk the Ohori Park loop before nine, while the mist is still on the lake. Japanese garden, then the art museum when it opens.",
+            "ja": "9時前に大濠公園を一周。池にまだ霧が残っています。日本庭園を見て、開館に合わせて美術館へ。"
+          }
+        },
+        {
+          "time": { "en": "Afternoon", "ja": "午後" },
+          "text": {
+            "en": "Climb the castle ruins for the view, then a bus west to Momochi. Beach, seaside promenade, and the tower at 123 metres as the sun drops.",
+            "ja": "福岡城跡から街を見わたし、バスで西の百道へ。砂浜と海辺の遊歩道、日が落ちるころに福岡タワーの展望室へ。"
+          }
+        },
+        {
+          "time": { "en": "Evening", "ja": "夜" },
+          "text": {
+            "en": "Back to Yakuin for dinner: motsunabe in winter, mizutaki any time. Finish with a fruit parfait if anywhere is still serving.",
+            "ja": "薬院に戻って夕食。冬ならもつ鍋、季節を問わず水炊き。まだ開いていれば、締めにフルーツパフェを。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "day3",
+      "name": { "en": "Day three — out of town", "ja": "3日目 — 街の外へ" },
+      "meta": { "en": "Dazaifu or Itoshima · pick by weather", "ja": "太宰府か糸島・天気で決める" },
+      "steps": [
+        {
+          "time": { "en": "If it's clear", "ja": "晴れていたら" },
+          "text": {
+            "en": "Itoshima. Train to Chikuzen-Maebaru, bicycle to the coast, lunch facing the sea, white torii gate, home by sunset.",
+            "ja": "糸島へ。筑前前原駅まで電車、自転車で海岸へ。海を見ながら昼食、白い鳥居を見て、日暮れに戻ります。"
+          }
+        },
+        {
+          "time": { "en": "If it's raining", "ja": "雨だったら" },
+          "text": {
+            "en": "Dazaifu. The shrine approach is sheltered by shop awnings, the national museum takes two unhurried hours, and warm mochi tastes better in bad weather.",
+            "ja": "太宰府へ。参道は店の軒がつづき、九州国立博物館はゆっくり2時間。焼きたての梅ヶ枝餅は、天気が悪い日ほどおいしい。"
+          }
+        },
+        {
+          "time": { "en": "Before the airport", "ja": "空港の前に" },
+          "text": {
+            "en": "Souvenirs in the Hakata station basement — mentaiko in a chilled pack, two boxes of sweets — then two subway stops to departures. Allow an hour; you won't need it.",
+            "ja": "博多駅の地下でおみやげを。冷蔵の明太子とお菓子をふた箱。そこから地下鉄2駅で空港です。1時間みておけば、たいてい余ります。"
+          }
+        }
+      ]
+    }
+  ]
+}

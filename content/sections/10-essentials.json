@@ -1,0 +1,66 @@
+{
+  "id": "essentials",
+  "ornament": "✿",
+  "layout": "notes",
+  "title": { "en": "First things", "ja": "はじめに" },
+  "intro": {
+    "en": "Fukuoka is the rare big city you can learn in a weekend. The airport is five minutes from downtown, everything worth seeing sits inside a 20-minute subway ride, and nobody is in a hurry.",
+    "ja": "福岡は、週末ひとつで覚えられるめずらしい大都市です。空港から中心部までは地下鉄で数分、見どころはほぼ20分圏内。そして、だれも急いでいません。"
+  },
+  "items": [
+    {
+      "id": "arrival",
+      "name": { "en": "From the airport", "ja": "空港から" },
+      "meta": { "en": "5–11 min by subway", "ja": "地下鉄で5〜11分" },
+      "text": {
+        "en": "Fukuoka Airport's domestic terminal connects straight to the Kuko subway line: two stops to Hakata, five to Tenjin. From the international terminal, take the free shuttle bus to the domestic side first. It is almost certainly the shortest airport transfer in Japan.",
+        "ja": "福岡空港の国内線ターミナルは地下鉄空港線に直結。博多まで2駅、天神まで5駅です。国際線ターミナルからは、まず無料連絡バスで国内線側へ。おそらく日本一短い空港アクセスです。"
+      }
+    },
+    {
+      "id": "getting-around",
+      "name": { "en": "Getting around", "ja": "街のなかの移動" },
+      "meta": { "en": "Subway, bus, and your own feet", "ja": "地下鉄・バス・徒歩" },
+      "text": {
+        "en": "Three subway lines and a dense bus network cover the centre; a tap-and-go IC card (Suica, Pasmo, ICOCA or the local Nimoca all work) saves fumbling for coins. Hakata to Tenjin is two subway stops — or a pleasant 25-minute walk along the Naka river.",
+        "ja": "中心部は地下鉄3路線とバス網でほぼ完結。交通系ICカード（Suica・Pasmo・ICOCA・地元のnimocaなど）があれば小銭いらずです。博多から天神は地下鉄で2駅、那珂川沿いを歩いても25分ほど。"
+      }
+    },
+    {
+      "id": "money",
+      "name": { "en": "Cash, still", "ja": "やっぱり現金" },
+      "meta": { "en": "Carry ¥5,000–10,000", "ja": "5,000〜10,000円は持っておく" },
+      "text": {
+        "en": "Cards and IC payments work in shops and chains, but the yatai food stalls, tiny ramen counters and shrine charms are frequently cash-only. Convenience-store ATMs accept foreign cards around the clock.",
+        "ja": "お店やチェーンではカードやIC決済が使えますが、屋台や小さなラーメン屋、神社のお守りは現金のみのことが多いです。コンビニのATMなら海外カードも24時間使えます。"
+      }
+    },
+    {
+      "id": "when",
+      "name": { "en": "When to come", "ja": "いつ行く？" },
+      "meta": { "en": "Late March, or October–November", "ja": "3月下旬、または10〜11月" },
+      "text": {
+        "en": "Cherry blossom around Ohori Park and Maizuru peaks in late March to early April. Autumn is clear and mild. June is the rainy season, and July–August is humid — though July brings the Hakata Gion Yamakasa festival, when half-tonne floats are raced through the streets before dawn.",
+        "ja": "桜は3月下旬から4月上旬、大濠公園や舞鶴公園が見ごろ。秋は晴れて過ごしやすい季節です。6月は梅雨、7〜8月は蒸し暑い。ただし7月には博多祇園山笠があり、夜明け前の街を舁き山笠が走り抜けます。"
+      }
+    },
+    {
+      "id": "connectivity",
+      "name": { "en": "Staying online", "ja": "通信のこと" },
+      "meta": { "en": "eSIM beats pocket wifi", "ja": "eSIMが手軽" },
+      "text": {
+        "en": "An eSIM bought before departure is cheaper and lighter than renting a pocket router. Public wifi exists in stations and cafés, but treat it as untrusted: avoid banking on it, and prefer your own connection for anything with a password.",
+        "ja": "出発前に買うeSIMは、ポケットWi-Fiのレンタルより安くて身軽です。駅やカフェの公共Wi-Fiは便利ですが、信頼しすぎないこと。ネットバンキングなどは自分の回線で。"
+      }
+    },
+    {
+      "id": "manners",
+      "name": { "en": "Small manners", "ja": "ちいさな作法" },
+      "meta": { "en": "Quiet, tidy, no tipping", "ja": "静かに、きれいに、チップなし" },
+      "text": {
+        "en": "Speak softly on trains, carry your rubbish until you find a bin, don't tip, and slurp your ramen without guilt. At a yatai, order a drink along with your food — the stalls are tiny and the seat is part of the deal.",
+        "ja": "電車では静かに、ゴミは見つけたゴミ箱まで、チップは不要、ラーメンは気にせず音を立てて。屋台では食べものと一緒に飲みものも一杯。席数が少ないので、それがお作法です。"
+      }
+    }
+  ]
+}

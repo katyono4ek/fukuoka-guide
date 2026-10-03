@@ -1,0 +1,56 @@
+{
+  "locales": ["en", "ja"],
+  "defaultLocale": "en",
+  "baseUrl": "",
+  "webfonts": true,
+  "title": {
+    "en": "Fukuoka, softly",
+    "ja": "ふくおか、やさしく"
+  },
+  "tagline": {
+    "en": "A small, slow guide to Japan's friendliest city — ramen at midnight, camellias at dawn.",
+    "ja": "日本でいちばん人あたりのよい街を、ゆっくり歩くための小さな案内。夜は屋台のラーメン、朝は椿の花。"
+  },
+  "description": {
+    "en": "A minimalist bilingual guide to Fukuoka, Japan: neighbourhoods, yatai food stalls, cafés, day trips to Dazaifu and Itoshima, and a three-day itinerary.",
+    "ja": "福岡の街あるきガイド。エリア案内、屋台とグルメ、カフェ、太宰府や糸島への小旅行、3日間のモデルコースを日英二か国語で。"
+  },
+  "ui": {
+    "localeName": { "en": "English", "ja": "日本語" },
+    "switchTo": { "en": "日本語", "ja": "English" },
+    "switchLabel": { "en": "Read in Japanese", "ja": "Read in English" },
+    "menu": { "en": "Contents", "ja": "もくじ" },
+    "close": { "en": "Close", "ja": "閉じる" },
+    "top": { "en": "Back to top", "ja": "ページの先頭へ" },
+    "map": { "en": "Map", "ja": "地図" },
+    "filterAll": { "en": "Everything", "ja": "すべて" },
+    "filterLabel": { "en": "Filter", "ja": "絞り込む" },
+    "noMatches": { "en": "Nothing here yet — try another filter.", "ja": "該当なし。ほかの条件をお試しください。" },
+    "chooseLanguage": { "en": "Choose your language", "ja": "言語をお選びください" },
+    "footerNote": {
+      "en": "Made with care, not sponsored. Opening hours and prices change often — please check before you go.",
+      "ja": "広告ではなく、ただの愛のかたまりです。営業時間や料金は変わりやすいので、お出かけ前にご確認ください。"
+    },
+    "updated": { "en": "Last updated", "ja": "最終更新" },
+    "source": { "en": "Source on GitHub", "ja": "GitHub のソース" },
+    "skipToContent": { "en": "Skip to content", "ja": "本文へスキップ" },
+    "themeLabel": { "en": "Toggle dark mode", "ja": "ダークモード切り替え" },
+    "sectionsLabel": { "en": "Sections", "ja": "セクション" }
+  },
+  "tags": {
+    "hakata":    { "en": "Hakata",        "ja": "博多" },
+    "tenjin":    { "en": "Tenjin",        "ja": "天神" },
+    "ohori":     { "en": "Ohori",         "ja": "大濠" },
+    "seaside":   { "en": "Seaside",       "ja": "海辺" },
+    "nearby":    { "en": "Nearby",        "ja": "近郊" },
+    "free":      { "en": "Free",          "ja": "無料" },
+    "rainy":     { "en": "Rainy day",     "ja": "雨の日" },
+    "sweet":     { "en": "Sweet",         "ja": "甘いもの" },
+    "savoury":   { "en": "Savoury",       "ja": "しょっぱいもの" },
+    "evening":   { "en": "Evening",       "ja": "夜" },
+    "morning":   { "en": "Morning",       "ja": "朝" },
+    "shopping":  { "en": "Shopping",      "ja": "買いもの" },
+    "quiet":     { "en": "Quiet",         "ja": "静か" },
+    "photogenic":{ "en": "Photogenic",    "ja": "写真映え" }
+  }
+}

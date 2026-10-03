@@ -1,0 +1,57 @@
+{
+  "id": "seasons",
+  "ornament": "❁",
+  "layout": "notes",
+  "title": { "en": "The year, roughly", "ja": "一年のながれ" },
+  "intro": {
+    "en": "Fukuoka's weather is milder than most of Japan and wetter than you expect. Here is what each stretch of the year feels like.",
+    "ja": "福岡の気候は日本のほかの地域よりおだやかで、思っているより雨が多めです。季節ごとの感じをまとめました。"
+  },
+  "items": [
+    {
+      "id": "spring",
+      "name": { "en": "March – May", "ja": "3〜5月" },
+      "meta": { "en": "Cherry blossom, then the best weeks of the year", "ja": "桜、そして一年でいちばんよい時期" },
+      "text": {
+        "en": "Plum at Dazaifu in February, cherry around Maizuru and Ohori in late March, wisteria and rapeseed in April. Early May brings the Hakata Dontaku parade and the largest crowds of spring.",
+        "ja": "2月は太宰府の梅、3月下旬は舞鶴・大濠の桜、4月は藤と菜の花。5月初めは博多どんたくで、春でいちばんの人出になります。"
+      }
+    },
+    {
+      "id": "rainy",
+      "name": { "en": "June", "ja": "6月" },
+      "meta": { "en": "Tsuyu — the rainy season", "ja": "梅雨" },
+      "text": {
+        "en": "Warm, grey and genuinely wet, with hydrangeas as compensation. A good month for arcades, museums, kissaten and the underground city — Fukuoka is unusually well built for rain.",
+        "ja": "暖かく、灰色で、ほんとうによく降ります。代わりに紫陽花がきれいです。アーケード、美術館、喫茶店、地下街の月。福岡は雨に強くできた街です。"
+      }
+    },
+    {
+      "id": "summer",
+      "name": { "en": "July – August", "ja": "7〜8月" },
+      "meta": { "en": "Humid, festive, occasional typhoon", "ja": "蒸し暑く、祭りがあり、台風も" },
+      "text": {
+        "en": "Hot and sticky. The Hakata Gion Yamakasa runs through the first half of July, finishing with teams racing one-tonne floats through the streets before five in the morning. Beaches and sea breezes save the rest.",
+        "ja": "暑く湿気の多い季節。7月前半は博多祇園山笠、最後は早朝5時前に山笠が街を駆け抜けます。あとは海と潮風にたすけてもらいましょう。"
+      }
+    },
+    {
+      "id": "autumn",
+      "name": { "en": "September – November", "ja": "9〜11月" },
+      "meta": { "en": "Clear, mild, cosmos fields", "ja": "晴れてすずしく、コスモス" },
+      "text": {
+        "en": "Typhoon risk fades through September, then two of the loveliest months: dry air, cosmos at Nokonoshima and Uminonakamichi, maples in the hills around Dazaifu in late November.",
+        "ja": "9月を過ぎると台風の心配もうすれ、ここからが過ごしやすい2か月。乾いた空気、のこのしまや海の中道のコスモス、11月下旬は太宰府あたりの紅葉。"
+      }
+    },
+    {
+      "id": "winter",
+      "name": { "en": "December – February", "ja": "12〜2月" },
+      "meta": { "en": "Cold but rarely freezing", "ja": "寒いけれど、めったに凍らない" },
+      "text": {
+        "en": "Grey and windy off the sea, with little snow. This is hotpot season and the start of the Amaou strawberries, the city puts illuminations along the main streets, and the yatai feel twice as welcoming.",
+        "ja": "海からの風で曇りがちですが、雪はほとんど降りません。鍋の季節、そしてあまおうが始まります。大通りはイルミネーションで飾られ、屋台のありがたさが倍になります。"
+      }
+    }
+  ]
+}
