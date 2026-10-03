@@ -156,7 +156,9 @@ const jsonLd = (site, locale, origin, base) => {
       },
     },
   };
-  return JSON.stringify(data);
+  // JSON.stringify leaves "<" alone, so "</script>" in content would end the
+  // block early. < is the same character to a JSON parser.
+  return JSON.stringify(data).replace(/</g, '\\u003c');
 };
 
 /**
@@ -229,7 +231,7 @@ ${head({ site, locale, title, description, assets, origin, base, alternates, ldH
   <header class="topbar">
     <a class="wordmark" href="#top">${esc(t(site.title, locale))}</a>
     <div class="topbar-actions">
-      <button class="icon-btn" type="button" data-theme-toggle aria-label="${esc(
+      <button class="icon-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="${esc(
         t(site.ui.themeLabel, locale),
       )}">
         <span class="icon-sun" aria-hidden="true">☀</span><span class="icon-moon" aria-hidden="true">☾</span>

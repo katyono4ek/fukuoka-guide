@@ -313,6 +313,30 @@ test('hostile content is escaped, never injected', () => {
   assert.ok(html.includes('&lt;img src=x onerror=&quot;alert(1)&quot;&gt;'));
 });
 
+test('content cannot close the JSON-LD block early', () => {
+  const payload = '</script><script>alert(1)</script><!--';
+  const poisoned = structuredClone(content);
+  poisoned.site.updated = '2026-01-01';
+  poisoned.site.description.en = payload;
+  const html = renderPage(poisoned, 'en', { origin: ORIGIN, base: BASE });
+  assert.ok(!html.includes('<script>alert(1)'), 'the payload must not open a script element');
+  assert.ok(!html.includes('<!--'), 'the payload must not open a comment');
+
+  const ld = html.match(/<script type="application\/ld\+json">([^<]*)<\/script>/)[1];
+  assert.equal(JSON.parse(ld).description, payload, 'the data itself survives intact');
+  const hash = `sha256-${createHash('sha256').update(ld, 'utf8').digest('base64')}`;
+  const csp = html.match(/content="([^"]*default-src[^"]*)"/)[1].replaceAll('&#39;', "'");
+  assert.ok(csp.includes(`'${hash}'`), 'the CSP hash still covers the escaped block');
+});
+
+test('the dark-mode toggle announces its state from the start', () => {
+  const app = readFileSync(join(outDir, 'assets/app.js'), 'utf8');
+  for (const html of Object.values(pages)) {
+    assert.match(html, /data-theme-toggle[^>]*aria-pressed="false"/, 'toggle starts as a toggle button');
+  }
+  assert.match(app, /syncToggle\(\)/, 'app.js corrects aria-pressed to the real theme on load');
+});
+
 test('build reports what it produced', () => {
   assert.equal(result.base, BASE);
   assert.equal(result.origin, ORIGIN);

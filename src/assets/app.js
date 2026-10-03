@@ -30,17 +30,24 @@
 
   /* --- dark mode ------------------------------------------------------- */
   var toggle = document.querySelector('[data-theme-toggle]');
+  var systemDark = window.matchMedia('(prefers-color-scheme: dark)');
+  var isDark = function () {
+    var explicit = root.getAttribute('data-theme');
+    return explicit ? explicit === 'dark' : systemDark.matches;
+  };
+  var syncToggle = function () {
+    toggle.setAttribute('aria-pressed', String(isDark()));
+  };
   if (toggle) {
     toggle.addEventListener('click', function () {
-      var explicit = root.getAttribute('data-theme');
-      var dark = explicit
-        ? explicit === 'dark'
-        : window.matchMedia('(prefers-color-scheme: dark)').matches;
-      var next = dark ? 'light' : 'dark';
+      var next = isDark() ? 'light' : 'dark';
       root.setAttribute('data-theme', next);
       store.set('fk-theme', next);
-      toggle.setAttribute('aria-pressed', String(next === 'dark'));
+      syncToggle();
     });
+    // The markup can't know the theme; theme.js or the system decides it.
+    syncToggle();
+    if (systemDark.addEventListener) systemDark.addEventListener('change', syncToggle);
   }
 
   /* --- reveal on scroll ------------------------------------------------ */

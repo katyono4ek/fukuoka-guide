@@ -40,9 +40,9 @@
     },
     {
       "id": "p6",
-      "name": { "en": "Yoka yo / Ikin yo" },
-      "meta": { "en": "よかよ / いきんよ" },
-      "text": { "en": "Hakata dialect for \"it's fine\" and \"no need\". You will hear them constantly; using one gets you a smile." }
+      "name": { "en": "Yoka yo" },
+      "meta": { "en": "よかよ" },
+      "text": { "en": "Hakata dialect for \"it's fine\" or \"that's good\". You will hear it constantly; using it gets you a smile." }
     }
   ]
 }

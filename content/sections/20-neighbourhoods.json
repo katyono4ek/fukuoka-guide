@@ -25,7 +25,7 @@
       "name": { "en": "Tenjin", "ja": "天神" },
       "meta": { "en": "Department stores and an underground city", "ja": "デパートと地下街" },
       "text": {
-        "en": "Fukuoka's shopping core, with a 600-metre underground arcade beneath it — stained glass, dark wood, sixteen blocks of shops. A perfect rainy afternoon, and the fastest way to cross the district dry.",
+        "en": "Fukuoka's shopping core, with a 600-metre underground arcade beneath it — stained glass, dark wood, and shop after shop. A perfect rainy afternoon, and the fastest way to cross the district dry.",
         "ja": "福岡の買いものの中心。地下には約600メートルの天神地下街が伸び、ステンドグラスと落ち着いた木目の通りに店が並びます。雨の日の午後にぴったり、しかも濡れずに移動できます。"
       },
       "tags": ["tenjin", "shopping", "rainy"],
@@ -47,8 +47,8 @@
       "name": { "en": "Yakuin & Kego", "ja": "薬院・警固" },
       "meta": { "en": "Where locals eat", "ja": "地元の人が食べに行く場所" },
       "text": {
-        "en": "One stop south of Tenjin and noticeably calmer: bakeries, wine bars, flower shops and the kind of restaurant with eight seats and no English menu. Come for dinner rather than sightseeing.",
-        "ja": "天神のひと駅南、空気がすこし落ち着きます。パン屋、ワインバー、花屋、そして席が8つしかない英語メニューのない店。観光というより、夕食のために来るエリアです。"
+        "en": "An easy walk south of Tenjin and noticeably calmer: bakeries, wine bars, flower shops and the kind of restaurant with eight seats and no English menu. Come for dinner rather than sightseeing.",
+        "ja": "天神から南へ歩いてすぐ、空気がすこし落ち着きます。パン屋、ワインバー、花屋、そして席が8つしかない英語メニューのない店。観光というより、夕食のために来るエリアです。"
       },
       "tags": ["tenjin", "quiet", "evening"],
       "map": "Yakuin, Chuo Ward, Fukuoka"

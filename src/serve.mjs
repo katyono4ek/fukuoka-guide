@@ -1,7 +1,7 @@
 /* Minimal local preview server: no dependencies, read-only, localhost only. */
 import { createServer } from 'node:http';
 import { readFile, stat } from 'node:fs/promises';
-import { join, extname, normalize } from 'node:path';
+import { join, extname, normalize, sep } from 'node:path';
 import { ROOT } from './content.mjs';
 
 const DIST = join(ROOT, 'dist');
@@ -18,10 +18,16 @@ const TYPES = {
 };
 
 const resolve = async (urlPath) => {
+  let decoded;
+  try {
+    decoded = decodeURIComponent(urlPath.split('?')[0]);
+  } catch {
+    return null; // malformed percent-encoding
+  }
   // normalize() plus the prefix check keeps requests inside dist/.
-  const clean = normalize(decodeURIComponent(urlPath.split('?')[0])).replace(/^(\.\.(\/|$))+/, '');
+  const clean = normalize(decoded).replace(/^(\.\.(\/|$))+/, '');
   let target = join(DIST, clean);
-  if (!target.startsWith(DIST)) return null;
+  if (target !== DIST && !target.startsWith(DIST + sep)) return null;
   try {
     if ((await stat(target)).isDirectory()) target = join(target, 'index.html');
   } catch {

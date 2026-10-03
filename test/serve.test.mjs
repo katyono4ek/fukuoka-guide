@@ -79,3 +79,12 @@ test('the preview server refuses to escape its output directory', async () => {
     assert.ok(!res.body.includes('"fukuoka-roadmap"'), `${path} leaked a project file`);
   }
 });
+
+test('a malformed URL gets a 404 and the server keeps running', async () => {
+  for (const path of ['/%E0%A4%A', '/%', '/en/%zz']) {
+    const res = await get(path);
+    assert.equal(res.status, 404, `${path} should be a 404`);
+  }
+  const after = await get('/en/');
+  assert.equal(after.status, 200, 'the server must survive a malformed request');
+});
