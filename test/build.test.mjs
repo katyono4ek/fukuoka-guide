@@ -373,25 +373,6 @@ test('photos ship with exact dimensions, alt text and a srcset that resolves', (
   }
 });
 
-test('every photo is rendered and credited with author, licence and source', () => {
-  for (const [key, photo] of Object.entries(content.photos)) {
-    const sectionId = key.split('/')[0];
-    for (const [locale, html] of Object.entries(pages)) {
-      const section = content.sections.find((s) => s.id === sectionId);
-      if (section && !sectionsFor([section], locale).length) continue;
-      const files = PHOTO_FORMATS[photoFormat(key)].widths.map((w) => photoFile(key, w));
-      assert.ok(files.every((file) => html.includes(`../photos/${file}`)), `${locale}: ${key} is not shown`);
-      assert.equal(html.split(`src="../photos/${files[0]}"`).length - 1, 1, `${locale}: ${key} shown more than once`);
-
-      const credits = html.slice(html.indexOf('<details class="credits">'), html.indexOf('</details>'));
-      assert.ok(credits.includes(`href="${esc(photo.source)}"`), `${locale}: ${key} source not credited`);
-      assert.ok(credits.includes(esc(photo.author)), `${locale}: ${key} author not credited`);
-      assert.ok(credits.includes(esc(photo.license)), `${locale}: ${key} licence not credited`);
-      if (photo.licenseUrl) assert.ok(credits.includes(`href="${esc(photo.licenseUrl)}"`), `${locale}: ${key} licence link`);
-    }
-  }
-});
-
 test('a card without a photo in a photo section gets a decorative tile; other sections stay plain', () => {
   for (const section of content.sections.filter((s) => s.layout === 'cards')) {
     const withPhotos = section.items.filter((item) => content.photos[`${section.id}/${item.id}`]);

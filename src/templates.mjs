@@ -348,7 +348,7 @@ ${other
   )
   .join('\n')}
 ${site.repo ? `      <a href="${esc(site.repo)}" rel="noopener noreferrer">${esc(t(site.ui.source, locale))}</a>` : ''}
-    </p>${photoCredits(site, visible, photos, locale)}
+    </p>
   </footer>
 
   <a class="totop" href="#top" data-totop aria-label="${esc(t(site.ui.top, locale))}"><span aria-hidden="true">↑</span></a>
