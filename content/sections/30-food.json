@@ -26,7 +26,7 @@
       "meta": { "en": "From dusk until late", "ja": "夕暮れから深夜まで" },
       "text": {
         "en": "Around a hundred of Japan's remaining street-food stalls are here — folding stools under a tarpaulin, ten seats, a menu of ramen, grilled skewers and oden. The Nakasu riverside row is the famous one; Tenjin's are quieter and often friendlier.",
-        "ja": "日本に残る屋台の多くが福岡にあります。ビニール越しの折りたたみ椅子、席は10ほど、ラーメンに焼き鳥におでん。有名なのは中洲の川沿い。天神の屋台のほうが静かで、話しかけやすいこともあります。"
+        "ja": "日本に残る屋台の多くが福岡にあります。ビニールの覆いの下に折りたたみ椅子、席は10ほど、ラーメンに焼き鳥におでん。有名なのは中洲の川沿い。天神の屋台のほうが静かで、話しかけやすいこともあります。"
       },
       "tags": ["evening", "savoury", "hakata", "photogenic"],
       "map": "Nakasu Yatai, Fukuoka"
@@ -56,10 +56,10 @@
     {
       "id": "mentaiko",
       "name": { "en": "Mentaiko", "ja": "明太子" },
-      "meta": { "en": "Spicy cod roe, on everything", "ja": "辛子めんたいこ、なんにでも" },
+      "meta": { "en": "Spicy cod roe, on everything", "ja": "辛子明太子、なんにでも" },
       "text": {
         "en": "Marinated pollock roe, Fukuoka's signature souvenir and the thing locals put on rice, baguettes, pasta and potatoes. Buy the chilled kind at the station if you're flying home soon; the tube paste travels better.",
-        "ja": "福岡の代表的なおみやげ。ご飯にもバゲットにもパスタにもじゃがいもにも。すぐ帰るなら駅で冷蔵のものを、持ち歩くならチューブタイプが安心です。"
+        "ja": "福岡の代表的なおみやげ。地元ではご飯にもバゲットにもパスタにもじゃがいもにも合わせます。すぐ帰るなら駅で冷蔵のものを、持ち歩くならチューブタイプが安心です。"
       },
       "tags": ["savoury", "hakata", "shopping"],
       "map": "Mentaiko shop, Hakata Station"
@@ -70,7 +70,7 @@
       "meta": { "en": "Soft noodles, burdock fritter", "ja": "やわらかい麺とごぼ天" },
       "text": {
         "en": "Fukuoka claims to be where udon entered Japan, and its noodles are deliberately soft rather than chewy. Order gobo-ten: a fritter of sliced burdock root that slowly dissolves into the broth.",
-        "ja": "うどん伝来の地を名のる福岡の麺は、コシよりやわらかさ。注文は「ごぼ天」で。薄切りごぼうの天ぷらが、少しずつ出汁に溶けていきます。"
+        "ja": "うどん伝来の地を名のる福岡の麺は、コシよりやわらかさ。注文は「ごぼ天」で。薄切りごぼうの天ぷらの衣が、少しずつつゆにほどけていきます。"
       },
       "tags": ["savoury", "morning"],
       "map": "Hakata udon, Fukuoka"
@@ -92,7 +92,7 @@
       "meta": { "en": "December–April", "ja": "12〜4月" },
       "text": {
         "en": "Fukuoka's own strawberry variety: large, deep red, almost too sweet. In season the department-store basements build whole parfaits around them, and the fruit parlours fill up by noon.",
-        "ja": "福岡生まれのいちご。大きく、濃い赤で、甘さがはっきりしています。旬にはデパ地下がパフェをつくり、フルーツパーラーは昼前に満席になります。"
+        "ja": "福岡生まれのいちご。大きく、濃い赤で、甘さがはっきりしています。旬にはデパ地下にあまおうのパフェが並び、フルーツパーラーは昼前に満席になります。"
       },
       "tags": ["sweet", "tenjin"],
       "map": "Amaou strawberry parfait, Fukuoka"
@@ -103,7 +103,7 @@
       "meta": { "en": "Souvenirs that survive a flight", "ja": "持ち帰れるおみやげ" },
       "text": {
         "en": "Buttery white-bean cakes, soft marshmallow-and-yolk confections, cream-filled shells — the station and airport sell them in gift boxes designed for exactly this. Pick two, share one on the plane.",
-        "ja": "白あんのバター菓子、マシュマロと黄身のやわらかい一口菓子、クリーム入りの生菓子。駅や空港には、まさにおみやげ用の箱が並びます。ふたつ買って、ひとつは機内で。"
+        "ja": "白あんのバター菓子、マシュマロと黄身のやわらかい一口菓子、クリーム入りの焼き菓子。駅や空港には、まさにおみやげ用の箱が並びます。ふたつ買って、ひとつは機内で。"
       },
       "tags": ["sweet", "shopping", "hakata"],
       "map": "Hakata souvenir sweets, Hakata Station"

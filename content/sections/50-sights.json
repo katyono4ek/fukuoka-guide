@@ -14,8 +14,8 @@
       "name": { "en": "Ohori Park", "ja": "大濠公園" },
       "meta": { "en": "Free · 2 km loop", "ja": "無料・一周約2km" },
       "text": {
-        "en": "A lake left over from a castle moat, with three islands joined by bridges, a stone teahouse, and a separate walled Japanese garden worth the small entry fee. Loveliest an hour after sunrise.",
-        "ja": "福岡城の外堀が残った池。橋でつながる三つの島、石づくりの茶屋、そして塀の内側には有料の日本庭園（入園料のねうちあり）。いちばんきれいなのは日の出から1時間後です。"
+        "en": "A lake left over from a castle moat, with three islands joined by bridges, the Ukimido pavilion standing out on the water, and a separate walled Japanese garden worth the small entry fee. Loveliest an hour after sunrise.",
+        "ja": "福岡城の外堀を利用してつくられた池。橋でつながる三つの島、水上に建つ浮見堂、そして塀の内側には有料の日本庭園（入園料のねうちあり）。いちばんきれいなのは日の出から1時間後です。"
       },
       "tags": ["ohori", "free", "quiet", "morning"],
       "map": "Ohori Park, Fukuoka"
@@ -37,7 +37,7 @@
       "meta": { "en": "Free · Hakata Old Town", "ja": "無料・博多旧市街" },
       "text": {
         "en": "The shrine the Yamakasa festival belongs to, with a decorated float standing in its hall all year and a 1,000-year-old ginkgo in the courtyard. Small, central, and usually almost empty.",
-        "ja": "博多祇園山笠の神社。境内には一年中飾り山笠が立ち、樹齢千年といわれる銀杏がそびえます。小さく、街の中心にあり、たいていすいています。"
+        "ja": "博多祇園山笠を奉納する神社。境内には一年中飾り山笠が立ち、樹齢千年といわれる銀杏がそびえます。小さく、街の中心にあり、たいていすいています。"
       },
       "tags": ["hakata", "free", "quiet"],
       "map": "Kushida Shrine, Fukuoka"
@@ -47,8 +47,8 @@
       "name": { "en": "Tochoji Temple", "ja": "東長寺" },
       "meta": { "en": "Free · wooden Buddha", "ja": "無料・木造大仏" },
       "text": {
-        "en": "Home to one of Japan's largest seated wooden Buddhas, with a dark passage behind it representing hell and paradise — you walk through it in complete blackness, one hand on the rail. Five minutes from Hakata station.",
-        "ja": "日本有数の木造坐像「福岡大仏」。像の裏には地獄・極楽めぐりの暗い回廊があり、手すりをたよりに真っ暗闇を歩きます。博多駅から徒歩5分。"
+        "en": "Home to one of Japan's largest seated wooden Buddhas, with a dark passage behind it representing hell and paradise — you walk through it in complete blackness, one hand on the rail. Right by Gion subway station, or about ten minutes' walk from Hakata station.",
+        "ja": "日本有数の木造坐像「福岡大仏」。像の裏には地獄・極楽めぐりの暗い回廊があり、手すりをたよりに真っ暗闇を歩きます。地下鉄祇園駅からすぐ、博多駅からは徒歩10分ほど。"
       },
       "tags": ["hakata", "free", "rainy"],
       "map": "Tochoji Temple, Fukuoka"
@@ -70,7 +70,7 @@
       "meta": { "en": "Free · fountain shows", "ja": "無料・噴水ショー" },
       "text": {
         "en": "A curved 1990s mall built around an artificial canal, with a dancing fountain show on the hour and a ramen food hall collecting bowls from across Japan on the top floor. Unashamedly a mall, and good at it.",
-        "ja": "人工の運河をかこむ1990年代の曲線的なモール。毎時の噴水ショーと、最上階には全国のラーメンが集まるフードホール。モールであることに照れがなく、それが心地よい場所です。"
+        "ja": "人工の運河をかこむ1990年代の曲線的なモール。毎時の噴水ショーがあり、最上階には全国のラーメンが集まるフードホールも。モールであることに照れがなく、それが心地よい場所です。"
       },
       "tags": ["hakata", "rainy", "shopping", "free"],
       "map": "Canal City Hakata, Fukuoka"
@@ -81,7 +81,7 @@
       "meta": { "en": "Ticketed · 234 m", "ja": "有料・高さ234m" },
       "text": {
         "en": "Japan's tallest seaside tower, mirrored on every face, with an observation deck at 123 metres. Go up at dusk: the city on one side, the Genkai sea darkening on the other.",
-        "ja": "日本一高い海浜タワー。全面が鏡張りで、展望室は123メートル。夕暮れに上がると、片側に街、もう片側に暮れていく玄海の海が見えます。"
+        "ja": "日本一高い海浜タワー。全面が鏡張りで、展望室は123メートル。夕暮れに上がると、片側に街、もう片側に暮れていく玄界灘が見えます。"
       },
       "tags": ["seaside", "evening", "photogenic"],
       "map": "Fukuoka Tower, Fukuoka"
@@ -103,7 +103,7 @@
       "meta": { "en": "Ticketed · bikes for rent", "ja": "有料・レンタサイクル" },
       "text": {
         "en": "An enormous park on the sandbar across the bay — 300 hectares of flower fields, a small animal zone and cycle paths. Reachable by train, or by the prettier route: a ferry straight from Hakata port.",
-        "ja": "湾の向こうの砂州にひろがる約300ヘクタールの公園。花畑、小さな動物の森、サイクリングロード。電車でも行けますが、博多ふ頭からの船のほうが気持ちのよい道です。"
+        "ja": "湾の向こうの砂州にひろがる約300ヘクタールの公園。花畑、小さな動物の森、サイクリングロード。電車でも行けますが、博多ふ頭から船で渡るほうが気持ちのよい行き方です。"
       },
       "tags": ["seaside", "nearby", "photogenic"],
       "map": "Uminonakamichi Seaside Park, Fukuoka"

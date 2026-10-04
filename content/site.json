@@ -9,7 +9,7 @@
   },
   "tagline": {
     "en": "A small, slow guide to Japan's friendliest city — ramen at midnight, camellias at dawn.",
-    "ja": "日本でいちばん人あたりのよい街を、ゆっくり歩くための小さな案内。夜は屋台のラーメン、朝は椿の花。"
+    "ja": "日本でいちばん人のあたたかい街を、ゆっくり歩くための小さな案内。夜は屋台のラーメン、朝は椿の花。"
   },
   "description": {
     "en": "A minimalist bilingual guide to Fukuoka, Japan: neighbourhoods, yatai food stalls, cafés, day trips to Dazaifu and Itoshima, and a three-day itinerary.",
@@ -29,10 +29,10 @@
     "chooseLanguage": { "en": "Choose your language", "ja": "言語をお選びください" },
     "footerNote": {
       "en": "Made with care, not sponsored. Opening hours and prices change often — please check before you go.",
-      "ja": "広告ではなく、ただの愛のかたまりです。営業時間や料金は変わりやすいので、お出かけ前にご確認ください。"
+      "ja": "広告ではなく、心をこめてつくった案内です。営業時間や料金は変わりやすいので、お出かけ前にご確認ください。"
     },
     "updated": { "en": "Last updated", "ja": "最終更新" },
-    "source": { "en": "Source on GitHub", "ja": "GitHub のソース" },
+    "source": { "en": "Source on GitHub", "ja": "GitHubのソースコード" },
     "skipToContent": { "en": "Skip to content", "ja": "本文へスキップ" },
     "themeLabel": { "en": "Toggle dark mode", "ja": "ダークモード切り替え" },
     "sectionsLabel": { "en": "Sections", "ja": "セクション" },

@@ -5,7 +5,7 @@
   "title": { "en": "First things", "ja": "はじめに" },
   "intro": {
     "en": "Fukuoka is the rare big city you can learn in a weekend. The airport is five minutes from downtown, everything worth seeing sits inside a 20-minute subway ride, and nobody is in a hurry.",
-    "ja": "福岡は、週末ひとつで覚えられるめずらしい大都市です。空港から中心部までは地下鉄で数分、見どころはほぼ20分圏内。そして、だれも急いでいません。"
+    "ja": "福岡は、週末だけで歩き方を覚えられる、めずらしい大都市です。空港から中心部までは地下鉄で数分、見どころはほぼ20分圏内。そして、だれも急いでいません。"
   },
   "items": [
     {
@@ -23,7 +23,7 @@
       "meta": { "en": "Subway, bus, and your own feet", "ja": "地下鉄・バス・徒歩" },
       "text": {
         "en": "Three subway lines and a dense bus network cover the centre; a tap-and-go IC card (Suica, Pasmo, ICOCA or the local Nimoca all work) saves fumbling for coins. Hakata to Tenjin is three subway stops — or a pleasant 25-minute walk along the Naka river.",
-        "ja": "中心部は地下鉄3路線とバス網でほぼ完結。交通系ICカード（Suica・Pasmo・ICOCA・地元のnimocaなど）があれば小銭いらずです。博多から天神は地下鉄で3駅、那珂川沿いを歩いても25分ほど。"
+        "ja": "中心部は地下鉄3路線とバス網でほぼ完結。交通系ICカード（Suica・PASMO・ICOCA・地元のnimocaなど）があれば小銭いらずです。博多から天神は地下鉄で3駅、那珂川沿いを歩いても25分ほど。"
       }
     },
     {
@@ -32,7 +32,7 @@
       "meta": { "en": "Carry ¥5,000–10,000", "ja": "5,000〜10,000円は持っておく" },
       "text": {
         "en": "Cards and IC payments work in shops and chains, but the yatai food stalls, tiny ramen counters and shrine charms are frequently cash-only. Convenience-store ATMs accept foreign cards around the clock.",
-        "ja": "お店やチェーンではカードやIC決済が使えますが、屋台や小さなラーメン屋、神社のお守りは現金のみのことが多いです。コンビニのATMなら海外カードも24時間使えます。"
+        "ja": "お店やチェーンではカードやIC決済が使えますが、屋台や小さなラーメン屋、神社のお守りは現金のみのことが多いです。コンビニのATMなら、海外発行のカードも24時間使えます。"
       }
     },
     {
@@ -41,7 +41,7 @@
       "meta": { "en": "Late March, or October–November", "ja": "3月下旬、または10〜11月" },
       "text": {
         "en": "Cherry blossom around Ohori Park and Maizuru peaks in late March to early April. Autumn is clear and mild. June is the rainy season, and July–August is humid — though July brings the Hakata Gion Yamakasa festival, when half-tonne floats are raced through the streets before dawn.",
-        "ja": "桜は3月下旬から4月上旬、大濠公園や舞鶴公園が見ごろ。秋は晴れて過ごしやすい季節です。6月は梅雨、7〜8月は蒸し暑い。ただし7月には博多祇園山笠があり、夜明け前の街を舁き山笠が走り抜けます。"
+        "ja": "桜は3月下旬から4月上旬、大濠公園や舞鶴公園が見ごろ。秋は晴れて過ごしやすい季節です。6月は梅雨、7〜8月は蒸し暑くなります。ただし7月には博多祇園山笠があり、夜明け前の街を舁き山笠が走り抜けます。"
       }
     },
     {
@@ -59,7 +59,7 @@
       "meta": { "en": "Quiet, tidy, no tipping", "ja": "静かに、きれいに、チップなし" },
       "text": {
         "en": "Speak softly on trains, carry your rubbish until you find a bin, don't tip, and slurp your ramen without guilt. At a yatai, order a drink along with your food — the stalls are tiny and the seat is part of the deal.",
-        "ja": "電車では静かに、ゴミは見つけたゴミ箱まで、チップは不要、ラーメンは気にせず音を立てて。屋台では食べものと一緒に飲みものも一杯。席数が少ないので、それがお作法です。"
+        "ja": "電車では静かに、ゴミはゴミ箱が見つかるまで持ち歩き、チップは不要、ラーメンは気にせず音を立てて。屋台では食べものと一緒に飲みものも一杯。席数が少ないので、それがお作法です。"
       }
     }
   ]

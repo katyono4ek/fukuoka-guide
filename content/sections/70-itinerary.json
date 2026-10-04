@@ -5,7 +5,7 @@
   "title": { "en": "Three soft days", "ja": "やさしい3日間" },
   "intro": {
     "en": "One possible shape for a first visit. Nothing here is more than 25 minutes from anything else, so swap freely — the weather should decide, not the plan.",
-    "ja": "はじめての福岡のための、ひとつの案です。どこも互いに25分以内なので、入れ替えは自由に。決めるのは計画ではなく、その日の天気で。"
+    "ja": "はじめての福岡のための、ひとつの案です。どこも互いに25分以内なので、入れ替えは自由に。計画よりも、その日の天気で決めてください。"
   },
   "items": [
     {
@@ -45,7 +45,7 @@
           "time": { "en": "Morning", "ja": "午前" },
           "text": {
             "en": "Walk the Ohori Park loop before nine, while the mist is still on the lake. Japanese garden, then the art museum when it opens.",
-            "ja": "9時前に大濠公園を一周。池にまだ霧が残っています。日本庭園を見て、開館に合わせて美術館へ。"
+            "ja": "9時前、池に霧が残っているうちに大濠公園を一周。日本庭園を見て、開館に合わせて美術館へ。"
           }
         },
         {
@@ -80,7 +80,7 @@
           "time": { "en": "If it's raining", "ja": "雨だったら" },
           "text": {
             "en": "Dazaifu. The shrine approach is sheltered by shop awnings, the national museum takes two unhurried hours, and warm mochi tastes better in bad weather.",
-            "ja": "太宰府へ。参道は店の軒がつづき、九州国立博物館はゆっくり2時間。焼きたての梅ヶ枝餅は、天気が悪い日ほどおいしい。"
+            "ja": "太宰府へ。参道は店の軒先が続くので濡れにくく、九州国立博物館はゆっくり2時間。焼きたての梅ヶ枝餅は、天気が悪い日ほどおいしい。"
           }
         },
         {

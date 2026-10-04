@@ -5,7 +5,7 @@
   "title": { "en": "The year, roughly", "ja": "一年のながれ" },
   "intro": {
     "en": "Fukuoka's weather is milder than most of Japan and wetter than you expect. Here is what each stretch of the year feels like.",
-    "ja": "福岡の気候は日本のほかの地域よりおだやかで、思っているより雨が多めです。季節ごとの感じをまとめました。"
+    "ja": "福岡の気候は日本のほかの地域よりおだやかで、思っているより雨が多めです。季節ごとの様子をまとめました。"
   },
   "items": [
     {
@@ -23,7 +23,7 @@
       "meta": { "en": "Tsuyu — the rainy season", "ja": "梅雨" },
       "text": {
         "en": "Warm, grey and genuinely wet, with hydrangeas as compensation. A good month for arcades, museums, kissaten and the underground city — Fukuoka is unusually well built for rain.",
-        "ja": "暖かく、灰色で、ほんとうによく降ります。代わりに紫陽花がきれいです。アーケード、美術館、喫茶店、地下街の月。福岡は雨に強くできた街です。"
+        "ja": "蒸し暑く、空はどんよりとして、ほんとうによく降ります。代わりに紫陽花がきれいです。アーケード、美術館、喫茶店、地下街の月。福岡は雨に強くできた街です。"
       }
     },
     {
@@ -50,7 +50,7 @@
       "meta": { "en": "Cold but rarely freezing", "ja": "寒いけれど、めったに凍らない" },
       "text": {
         "en": "Grey and windy off the sea, with little snow. This is hotpot season and the start of the Amaou strawberries, the city puts illuminations along the main streets, and the yatai feel twice as welcoming.",
-        "ja": "海からの風で曇りがちですが、雪はほとんど降りません。鍋の季節、そしてあまおうが始まります。大通りはイルミネーションで飾られ、屋台のありがたさが倍になります。"
+        "ja": "海からの風で曇りがちですが、雪はほとんど降りません。鍋の季節で、あまおうの季節も始まります。大通りはイルミネーションで飾られ、屋台のありがたさが倍になります。"
       }
     }
   ]

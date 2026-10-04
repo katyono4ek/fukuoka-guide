@@ -66,7 +66,7 @@
   "daytrips/yufuin": {
     "alt": {
       "en": "Steam drifting over an outdoor hot-spring bath in Yufuin, with Mount Yufu behind",
-      "ja": "湯けむりの立つ由布院の露天風呂と、背後の由布岳"
+      "ja": "湯けむりの立つ湯布院の露天風呂と、背後の由布岳"
     },
     "author": "Yasuhiro from Tokyo, Japan",
     "license": "CC BY 2.0",
@@ -86,7 +86,7 @@
   "food/goma-saba": {
     "alt": {
       "en": "Slices of raw mackerel dressed in sesame and soy, with ginger and green onion",
-      "ja": "しょうがとねぎを添えた、ごまとしょうゆで和えた生の鯖"
+      "ja": "ごまとしょうゆで和えた生のさば。しょうがとねぎを添えて"
     },
     "author": "ayustety from Tokyo, Japan",
     "license": "CC BY-SA 2.0",
@@ -165,7 +165,7 @@
   "neighbourhoods/hakata": {
     "alt": {
       "en": "The long glass front of JR Hakata City, the station building, under a clear sky",
-      "ja": "晴れた空の下、ガラス張りの JR博多シティ（博多駅ビル）の正面"
+      "ja": "晴れた空の下、ガラス張りのJR博多シティ（博多駅ビル）の正面"
     },
     "author": "ぱちょぴ",
     "license": "CC BY-SA 3.0",
@@ -225,7 +225,7 @@
   "neighbourhoods/yakuin": {
     "alt": {
       "en": "The vermilion wooden gate of Kego Shrine",
-      "ja": "警固神社の朱塗りの木の神門"
+      "ja": "警固神社の朱塗りの神門"
     },
     "author": "Hirho",
     "license": "CC BY-SA 4.0",
@@ -245,7 +245,7 @@
   "sights/canal-city": {
     "alt": {
       "en": "The curving canal at Canal City Hakata, with trees and terraces",
-      "ja": "木々とテラスに囲まれた、キャナルシティ博多の曲がった運河"
+      "ja": "木々とテラスに囲まれた、キャナルシティ博多のゆるやかに曲がる運河"
     },
     "author": "そらみみ",
     "license": "CC BY-SA 4.0",

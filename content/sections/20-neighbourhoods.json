@@ -15,7 +15,7 @@
       "meta": { "en": "Arrival, ramen, old temples", "ja": "到着・ラーメン・古い寺町" },
       "text": {
         "en": "The station is a city in itself — ten floors of food and a rooftop garden shrine. Walk ten minutes west and you are in Hakata Old Town, a quiet grid of temples that survived six centuries of merchants.",
-        "ja": "博多駅はそれ自体がひとつの街。グルメフロアが何層も重なり、屋上には小さな庭と神社があります。西へ10分歩けば、商人の町の名残が残る静かな寺町「博多旧市街」です。"
+        "ja": "博多駅はそれ自体がひとつの街。グルメフロアが何層も重なり、屋上には小さな庭と神社があります。西へ10分歩けば、商人の町の面影が残る静かな寺町「博多旧市街」です。"
       },
       "tags": ["hakata", "shopping"],
       "map": "Hakata Station, Fukuoka"
@@ -34,10 +34,10 @@
     {
       "id": "daimyo",
       "name": { "en": "Daimyo", "ja": "大名" },
-      "meta": { "en": "Vintage shops, small coffee", "ja": "古着と小さなコーヒー" },
+      "meta": { "en": "Vintage shops, small coffee", "ja": "古着と小さなコーヒー店" },
       "text": {
         "en": "Narrow lanes behind Tenjin filled with second-hand clothing, one-room boutiques, barbers and coffee stands. The best browsing in the city, and almost all of it on foot.",
-        "ja": "天神の裏手にひろがる細い路地。古着屋、ひと部屋のセレクトショップ、理容室、コーヒースタンド。市内でいちばん「見るのが楽しい」エリアで、すべて歩いて回れます。"
+        "ja": "天神の裏手にひろがる細い路地。古着屋、ひと部屋だけの小さなセレクトショップ、理容室、コーヒースタンド。市内でいちばん「見るのが楽しい」エリアで、すべて歩いて回れます。"
       },
       "tags": ["tenjin", "shopping", "photogenic"],
       "map": "Daimyo, Chuo Ward, Fukuoka"
@@ -48,7 +48,7 @@
       "meta": { "en": "Where locals eat", "ja": "地元の人が食べに行く場所" },
       "text": {
         "en": "An easy walk south of Tenjin and noticeably calmer: bakeries, wine bars, flower shops and the kind of restaurant with eight seats and no English menu. Come for dinner rather than sightseeing.",
-        "ja": "天神から南へ歩いてすぐ、空気がすこし落ち着きます。パン屋、ワインバー、花屋、そして席が8つしかない英語メニューのない店。観光というより、夕食のために来るエリアです。"
+        "ja": "天神から南へ歩いてすぐ、空気がすこし落ち着きます。パン屋、ワインバー、花屋、そして席が8つしかなく、英語のメニューもない店。観光というより、夕食のために来るエリアです。"
       },
       "tags": ["tenjin", "quiet", "evening"],
       "map": "Yakuin, Chuo Ward, Fukuoka"
@@ -58,8 +58,8 @@
       "name": { "en": "Ohori & Akasaka", "ja": "大濠・赤坂" },
       "meta": { "en": "A lake, a ruined castle, an art museum", "ja": "池・城跡・美術館" },
       "text": {
-        "en": "A two-kilometre loop around a former castle moat, now a park with a Japanese garden, a teahouse island and joggers at every hour. The castle ruins and the cherry trees of Maizuru are on the other side of the road.",
-        "ja": "かつての城の外堀をめぐる約2キロの周遊路。日本庭園、浮島の茶屋、そして一日中絶えないランナー。道をはさんだ向かいは福岡城跡と、桜の舞鶴公園です。"
+        "en": "A two-kilometre loop around a former castle moat, now a park with a Japanese garden, a pavilion out on the water and joggers at every hour. The castle ruins and the cherry trees of Maizuru are on the other side of the road.",
+        "ja": "かつて城の外堀だった池をめぐる、約2キロの周遊路。日本庭園、水上に建つ浮見堂、そして一日中絶えないランナー。道をはさんだ向かいは福岡城跡と、桜の舞鶴公園です。"
       },
       "tags": ["ohori", "free", "quiet", "morning"],
       "map": "Ohori Park, Fukuoka"
@@ -70,7 +70,7 @@
       "meta": { "en": "Neon on the water", "ja": "川面のネオン" },
       "text": {
         "en": "A sandbank island between two channels of the river, the densest nightlife in western Japan, and a riverside promenade where the yatai set up at dusk. Pretty from the bridges, loud inside.",
-        "ja": "川の中洲にできた、西日本でもっとも濃い繁華街。夕暮れには川沿いに屋台が並びます。橋の上から眺めるときれい、なかに入るとにぎやかです。"
+        "ja": "川の中洲にできた、西日本最大級の歓楽街。夕暮れには川沿いに屋台が並びます。橋の上から眺めるときれい、なかに入るとにぎやかです。"
       },
       "tags": ["hakata", "evening", "photogenic"],
       "map": "Nakasu, Hakata Ward, Fukuoka"
@@ -92,7 +92,7 @@
       "meta": { "en": "400 metres of covered shopping", "ja": "約400メートルのアーケード" },
       "text": {
         "en": "Fukuoka's oldest shopping street, roofed end to end: sweet shops, kimono fabric, a stall selling the local zenzai red-bean soup, and a festival float on permanent display halfway down.",
-        "ja": "福岡でいちばん古い商店街。端から端まで屋根があり、菓子屋、呉服、名物のぜんざい、そして途中には飾り山笠が一年中立っています。"
+        "ja": "福岡でいちばん古い商店街。端から端まで屋根があり、菓子屋や呉服店、名物のぜんざいの店が並びます。中ほどには飾り山笠が一年中飾られています。"
       },
       "tags": ["hakata", "rainy", "shopping"],
       "map": "Kawabata Shopping Arcade, Fukuoka"
