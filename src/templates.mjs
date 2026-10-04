@@ -1,5 +1,6 @@
 import { createHash } from 'node:crypto';
 import { t, sectionsFor } from './content.mjs';
+import { PHOTO_FORMATS, photoFormat, photoFile, photoHeight } from './photos.mjs';
 
 const HTML_ESCAPES = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
 
@@ -28,6 +29,33 @@ const sakura = (cls) => {
   return `<svg class="${cls}" viewBox="-60 -60 120 120" aria-hidden="true" focusable="false"><g class="petals">${petals}</g><g class="stamens">${stamens}</g><circle class="pistil" cx="0" cy="0" r="3"/></svg>`;
 };
 
+/* Rendered widths, so the browser picks the smallest file that stays sharp. */
+const CARD_SIZES = '(min-width: 72rem) 23rem, (min-width: 40rem) 50vw, 100vw';
+const HERO_SIZES = '(min-width: 64rem) 60rem, 100vw';
+
+/** A pre-cropped photo with exact dimensions, so nothing shifts as it loads. */
+const photoImg = (key, photo, locale, { cls, sizes, lazy }) => {
+  const format = photoFormat(key);
+  const { widths } = PHOTO_FORMATS[format];
+  const url = (width) => `../photos/${photoFile(key, width)}`;
+  const srcset = widths.map((width) => `${url(width)} ${width}w`).join(', ');
+  return `<img class="${cls}" src="${esc(url(widths[0]))}" srcset="${esc(srcset)}" sizes="${sizes}" width="${
+    widths[0]
+  }" height="${photoHeight(format, widths[0])}" alt="${esc(t(photo.alt, locale))}"${
+    lazy ? ' loading="lazy"' : ' fetchpriority="high"'
+  } decoding="async">`;
+};
+
+/** A card's photo, or — when a photo section has none for it — a quiet tile that keeps the grid even. */
+const cardPhoto = (section, item, locale, photos) => {
+  const key = `${section.id}/${item.id}`;
+  if (photos[key]) return photoImg(key, photos[key], locale, { cls: 'card-photo', sizes: CARD_SIZES, lazy: true });
+  const mark = item.name.ja ?? t(item.name, locale);
+  return `<div class="card-photo card-tile" aria-hidden="true">${sakura('bloom bloom-tile')}<span class="card-tile-mark"${
+    item.name.ja ? ' lang="ja"' : ''
+  }>${esc(mark)}</span></div>`;
+};
+
 const tagChips = (item, site, locale) =>
   (item.tags ?? [])
     .map((tag) => `<li class="tag">${esc(t(site.tags[tag], locale))}</li>`)
@@ -40,13 +68,16 @@ const mapLink = (item, site, locale) =>
       )}<span class="map-arrow" aria-hidden="true">↗</span></a>`
     : '';
 
-const cardsLayout = (section, site, locale) => `
+const cardsLayout = (section, site, locale, photos) => {
+  const withPhotos = section.items.some((item) => photos[`${section.id}/${item.id}`]);
+  return `
         <ul class="cards" data-grid>
 ${section.items
   .map(
     (item) => `          <li class="card reveal" id="${esc(`${section.id}-${item.id}`)}" data-tags="${esc(
       (item.tags ?? []).join(' '),
-    )}">
+    )}">${withPhotos ? `
+            ${cardPhoto(section, item, locale, photos)}` : ''}
             <h3 class="card-title">${esc(t(item.name, locale))}</h3>
             <p class="card-meta">${esc(t(item.meta, locale))}</p>
             <p class="card-text">${esc(t(item.text, locale))}</p>
@@ -58,6 +89,7 @@ ${section.items
   )
   .join('\n')}
         </ul>`;
+};
 
 const notesLayout = (section, site, locale) => `
         <ol class="notes">
@@ -120,13 +152,13 @@ const filterBar = (section, site, locale) => {
         <p class="filter-empty" data-empty hidden>${esc(t(site.ui.noMatches, locale))}</p>`;
 };
 
-const renderSection = (section, site, locale) => `
+const renderSection = (section, site, locale, photos) => `
       <section class="section" id="${esc(section.id)}" aria-labelledby="${esc(section.id)}-heading" data-section>
         <header class="section-head">
           <span class="ornament" aria-hidden="true">${esc(section.ornament ?? '✿')}</span>
           <h2 class="section-title" id="${esc(section.id)}-heading">${esc(t(section.title, locale))}</h2>
           <p class="section-intro">${esc(t(section.intro, locale))}</p>
-        </header>${filterBar(section, site, locale)}${LAYOUTS[section.layout](section, site, locale)}
+        </header>${filterBar(section, site, locale)}${LAYOUTS[section.layout](section, site, locale, photos)}
       </section>`;
 
 const navList = (sections, locale) =>
@@ -136,6 +168,37 @@ const navList = (sections, locale) =>
         `          <li><a href="#${esc(section.id)}">${esc(t(section.title, locale))}</a></li>`,
     )
     .join('\n');
+
+/** CC BY and BY-SA ask for author, source and licence; one list in the footer carries them all. */
+const photoCredits = (site, visible, photos, locale) => {
+  const entries = [
+    ...(photos.hero ? [[t(site.ui.coverPhoto, locale), photos.hero]] : []),
+    ...visible.flatMap((section) =>
+      section.items
+        .filter((item) => photos[`${section.id}/${item.id}`])
+        .map((item) => [t(item.name, locale), photos[`${section.id}/${item.id}`]]),
+    ),
+  ];
+  if (!entries.length) return '';
+  const rows = entries
+    .map(([subject, photo]) => {
+      const license = photo.licenseUrl
+        ? `<a href="${esc(photo.licenseUrl)}" rel="license noopener noreferrer">${esc(photo.license)}</a>`
+        : esc(photo.license);
+      return `        <li><a href="${esc(photo.source)}" rel="noopener noreferrer">${esc(subject)}</a> — ${esc(
+        photo.author,
+      )} · ${license}</li>`;
+    })
+    .join('\n');
+  return `
+    <details class="credits">
+      <summary>${esc(t(site.ui.photoCredits, locale))}</summary>
+      <p class="credits-note">${esc(t(site.ui.photoCreditsNote, locale))}</p>
+      <ul class="credits-list">
+${rows}
+      </ul>
+    </details>`;
+};
 
 const jsonLd = (site, locale, origin, base) => {
   const path = `${base}/${locale}/`;
@@ -206,7 +269,7 @@ ${
   <script type="application/ld+json">${ld}</script>`;
 
 /** One full guide page for one locale. */
-export function renderPage({ site, sections }, locale, { origin = '', base = '' } = {}) {
+export function renderPage({ site, sections, photos = {} }, locale, { origin = '', base = '' } = {}) {
   const visible = sectionsFor(sections, locale);
   const title = `${t(site.title, locale)} · ${locale === 'ja' ? '福岡ガイド' : 'Fukuoka guide'}`;
   const description = t(site.description, locale);
@@ -255,7 +318,7 @@ ${other
       <p class="hero-eyebrow">Fukuoka · 福岡 · 九州</p>
       <h1 class="hero-title">${esc(t(site.title, locale))}</h1>
       <p class="hero-tagline">${esc(t(site.tagline, locale))}</p>
-      <a class="hero-cue" href="#${esc(visible[0].id)}" aria-label="${esc(
+${photos.hero ? `      ${photoImg('hero', photos.hero, locale, { cls: 'hero-photo', sizes: HERO_SIZES, lazy: false })}\n` : ''}      <a class="hero-cue" href="#${esc(visible[0].id)}" aria-label="${esc(
         t(site.ui.sectionsLabel, locale),
       )}"><span aria-hidden="true">↓</span></a>
     </div>
@@ -267,7 +330,7 @@ ${navList(visible, locale)}
       </ul>
     </nav>
 
-${visible.map((section) => renderSection(section, site, locale)).join('\n')}
+${visible.map((section) => renderSection(section, site, locale, photos)).join('\n')}
   </main>
 
   <footer class="footer">
@@ -285,7 +348,7 @@ ${other
   )
   .join('\n')}
 ${site.repo ? `      <a href="${esc(site.repo)}" rel="noopener noreferrer">${esc(t(site.ui.source, locale))}</a>` : ''}
-    </p>
+    </p>${photoCredits(site, visible, photos, locale)}
   </footer>
 
   <a class="totop" href="#top" data-totop aria-label="${esc(t(site.ui.top, locale))}"><span aria-hidden="true">↑</span></a>

@@ -16,12 +16,16 @@ Node 20 or newer. There are no dependencies to install — `npm install` has not
 content/
   site.json              UI strings, locales, the tag vocabulary
   sections/*.json        one file per section, rendered in filename order
+  photos.json            alt text and credits for every photo
+  photos/*.webp          pre-cropped photos, two widths each
 src/
   content.mjs            loader + validator (the build fails on a missing translation)
+  photos.mjs             photo formats and file names, shared by build and tool
   templates.mjs          HTML rendering, escaping, CSP
   build.mjs              writes dist/
   serve.mjs              local preview only
   assets/                styles.css, app.js, theme.js, gate.js (root redirect), favicon.svg
+tools/photo.mjs          fetches and crops a photo from Wikimedia Commons (not part of the build)
 test/                    node:test suites — content, markup, HTTP
 dist/                    build output (git-ignored)
 ```
@@ -60,6 +64,24 @@ search link. Tags must exist in `site.json`; unknown tags fail the build.
 decides the order, so `35-markets.json` lands between food and cafés. Pick a `layout`:
 `cards`, `notes` or `timeline`. No registry to update, no import to add.
 
+**A photo** — pick a file on [Wikimedia Commons](https://commons.wikimedia.org) under
+CC BY, CC BY-SA, CC0 or public domain, then:
+
+```
+npm run photo -- sights/nanzoin "File:Nanzoin reclining Buddha.jpg"
+npm run photo -- hero "File:…" --focus 0.5,0.4     # move the crop's centre
+```
+
+The key is `hero` or `<section id>/<item id>`. The tool needs `cwebp` (`brew install webp`)
+and does the rest: crops to the layout's ratio (16:7 for the hero, 3:2 for cards), writes
+two WebP widths into `content/photos/`, and records author, licence and source in
+`content/photos.json`. It leaves the alt text empty, and the build refuses to run until
+you have written it in every language. Credits appear under "Photo credits" in the footer.
+
+Photos belong on `cards` sections. Once a section has at least one, any card without a
+photo gets a quiet tile with its Japanese name instead, so the grid stays even; sections
+with no photos at all (cafés) are untouched.
+
 **A new language** — add the code to `locales` in `site.json`, translate every string
 there, and run `npm test`: the validator lists every key that still needs translating,
 file by file. Add `"locales": ["en"]` to a section to keep it out of other languages
@@ -97,8 +119,8 @@ protect is the integrity of the page itself.
   headers): `default-src 'none'`, no `unsafe-inline`, no `unsafe-eval`. The one inline
   block on the page is the JSON-LD description, allowed by its SHA-256 hash, which the
   build recomputes and a test re-verifies.
-- **No analytics, no cookies, no third-party scripts.** The only external request is the
-  Google Fonts stylesheet. Setting `"webfonts": false` in `content/site.json` removes it
+- **No analytics, no cookies, no third-party scripts.** Photos are served from the site
+  itself, never hot-linked. The only external request is the Google Fonts stylesheet. Setting `"webfonts": false` in `content/site.json` removes it
   and falls back to the system Mincho and rounded-Gothic faces, leaving the page with
   zero third-party requests.
 - **`localStorage` holds two harmless keys** (`fk-theme`, and `fk-locale` once the
@@ -113,7 +135,9 @@ protect is the integrity of the page itself.
 
 - **content** — every locale present and non-empty, no duplicate ids, no unknown tags or
   layouts, and the validator actually catches each of those when they are introduced.
-- **markup** — balanced tags, one `h1` per page, every anchor and `aria-labelledby`
+- **markup** — every photo with alt text, a `srcset` whose files exist, `width`/`height`
+  that match the real file, and a credit with author, licence and source; balanced
+  tags, one `h1` per page, every anchor and `aria-labelledby`
   resolving, every asset reference pointing at a file that exists, canonical/hreflang
   correctness, the CSP hash, no inline scripts/styles/handlers, and the escaping of
   hostile content.
@@ -121,6 +145,10 @@ protect is the integrity of the page itself.
   a 404, and a handful of path-traversal attempts.
 
 ## Notes on the content
+
+Photos come from Wikimedia Commons and are credited individually in the footer of each
+page; CC BY-SA photos remain under CC BY-SA after cropping. Mizutaki has no photo because
+Commons has no picture of it that is actually mizutaki.
 
 Written by hand, not sponsored, and deliberately light on opening hours and prices —
 those change constantly. Check before you go.

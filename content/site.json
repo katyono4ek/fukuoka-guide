@@ -35,7 +35,13 @@
     "source": { "en": "Source on GitHub", "ja": "GitHub のソース" },
     "skipToContent": { "en": "Skip to content", "ja": "本文へスキップ" },
     "themeLabel": { "en": "Toggle dark mode", "ja": "ダークモード切り替え" },
-    "sectionsLabel": { "en": "Sections", "ja": "セクション" }
+    "sectionsLabel": { "en": "Sections", "ja": "セクション" },
+    "photoCredits": { "en": "Photo credits", "ja": "写真クレジット" },
+    "photoCreditsNote": {
+      "en": "Photos from Wikimedia Commons, cropped and resized. Each is used under the licence linked beside it.",
+      "ja": "写真はウィキメディア・コモンズより。トリミング・縮小しています。各写真は記載のライセンスに基づいて使用しています。"
+    },
+    "coverPhoto": { "en": "Cover photo", "ja": "表紙の写真" }
   },
   "tags": {
     "hakata":    { "en": "Hakata",        "ja": "博多" },

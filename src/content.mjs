@@ -1,9 +1,11 @@
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { PHOTO_FORMATS, photoFormat, photoFile } from './photos.mjs';
 
 export const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const CONTENT = join(ROOT, 'content');
+export const PHOTOS = join(CONTENT, 'photos');
 
 const readJson = (file) => {
   try {
@@ -27,7 +29,11 @@ export function loadContent() {
     source: `content/sections/${name}`,
     ...readJson(join(CONTENT, 'sections', name)),
   }));
-  const content = { site, sections };
+  // Photos are optional: credits and alt text live in one manifest, keyed by
+  // "hero" or "<section id>/<item id>", so section files stay pure text.
+  const manifest = join(CONTENT, 'photos.json');
+  const photos = existsSync(manifest) ? readJson(manifest) : {};
+  const content = { site, sections, photos };
   const problems = validate(content);
   if (problems.length) {
     throw new Error(`Content validation failed:\n  - ${problems.join('\n  - ')}`);
@@ -49,7 +55,7 @@ const isLocalised = (value) =>
  * translated page: a missing locale, an empty string, an unknown tag, a
  * duplicate id, an unsupported layout.
  */
-export function validate({ site, sections }) {
+export function validate({ site, sections, photos = {} }) {
   const problems = [];
   const locales = site.locales;
   const knownTags = new Set(Object.keys(site.tags ?? {}));
@@ -115,6 +121,37 @@ export function validate({ site, sections }) {
       if (item.map && typeof item.map !== 'string') problems.push(`${itemWhere}: map must be a string`);
     }
     walk({ title: section.title, intro: section.intro, items: section.items }, where, expected);
+  }
+
+  for (const [key, photo] of Object.entries(photos)) {
+    const where = `content/photos.json#${key}`;
+    let expected = locales ?? [];
+    if (key !== 'hero') {
+      const [sectionId, itemId] = key.split('/');
+      const section = sections.find((s) => s.id === sectionId);
+      if (!section?.items?.some((item) => item.id === itemId)) {
+        problems.push(`${where}: no item "${itemId}" in a section "${sectionId}"`);
+        continue;
+      }
+      if (section.layout !== 'cards') problems.push(`${where}: photos are only shown on cards layouts`);
+      expected = section.locales ?? expected;
+    }
+    if (!isLocalised(photo.alt)) problems.push(`${where}: alt must be a localised string`);
+    else walk(photo.alt, `${where}.alt`, expected);
+    for (const field of ['author', 'license']) {
+      if (typeof photo[field] !== 'string' || !photo[field].trim()) problems.push(`${where}: ${field} is required`);
+    }
+    for (const field of ['source', 'licenseUrl']) {
+      if (photo[field] !== undefined && !/^https:\/\/[^\s"<>]+$/.test(photo[field])) {
+        problems.push(`${where}: ${field} must be an https URL`);
+      }
+    }
+    if (!photo.source) problems.push(`${where}: source is required`);
+    for (const width of PHOTO_FORMATS[photoFormat(key)].widths) {
+      if (!existsSync(join(PHOTOS, photoFile(key, width)))) {
+        problems.push(`${where}: missing content/photos/${photoFile(key, width)} (run npm run photo)`);
+      }
+    }
   }
   return problems;
 }

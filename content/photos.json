@@ -1,0 +1,339 @@
+{
+  "hero": {
+    "alt": {
+      "en": "Fukuoka from the air: the curve of Momochi beach, the mirrored Fukuoka Tower and the city stretching inland",
+      "ja": "上空から見た福岡。弧を描く百道浜、鏡張りの福岡タワー、内陸へ広がる街並み"
+    },
+    "author": "Nryate",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Fukuoka_Skyline_of_Seaside_Momochi.jpg",
+    "focus": [
+      0.5,
+      0.4
+    ]
+  },
+  "daytrips/dazaifu": {
+    "alt": {
+      "en": "The ornate main hall of Dazaifu Tenmangu with visitors in front",
+      "ja": "参拝客が集まる太宰府天満宮の華やかな本殿"
+    },
+    "author": "Jakub Hałun",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:20100719_Dazaifu_Tenmangu_Shrine_3328.jpg"
+  },
+  "daytrips/itoshima": {
+    "alt": {
+      "en": "The coast at Futamigaura, Itoshima: turquoise sea, the wedded rocks and a white torii",
+      "ja": "糸島・二見ヶ浦の海岸。青い海と夫婦岩、白い鳥居"
+    },
+    "author": "そらみみ (Soramimi)",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Futamigaura_Beach_from_observation_deck_of_Futamigaura_Cemetery_1.JPG"
+  },
+  "daytrips/karatsu": {
+    "alt": {
+      "en": "Karatsu Castle on its wooded hill across the water",
+      "ja": "海の向こう、木々に覆われた丘の上の唐津城"
+    },
+    "author": "SuperTaiyaki from Osaka, Japan",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Karatsu_Castle_(38299875212).jpg"
+  },
+  "daytrips/mojiko": {
+    "alt": {
+      "en": "The harbour at Mojiko with its tall observation tower and old port buildings",
+      "ja": "高い展望タワーと古い港の建物が並ぶ門司港"
+    },
+    "author": "そらみみ (Soramimi)",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mojiko_Retro_Highmart,_Former_Moji_Customs_and_Kammonkyo_Bridge.JPG"
+  },
+  "daytrips/yanagawa": {
+    "alt": {
+      "en": "Flat wooden punts moored along a tree-lined canal in Yanagawa",
+      "ja": "柳川の木々に囲まれた堀に並ぶ川下りの舟"
+    },
+    "author": "ブルーノ・プラス",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Yanagawa_kawakudari2.jpg"
+  },
+  "daytrips/yufuin": {
+    "alt": {
+      "en": "Steam drifting over an outdoor hot-spring bath in Yufuin, with Mount Yufu behind",
+      "ja": "湯けむりの立つ由布院の露天風呂と、背後の由布岳"
+    },
+    "author": "Yasuhiro from Tokyo, Japan",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Yufuin_Onsen_-Mus%C5%8Den_02.jpg"
+  },
+  "food/amaou": {
+    "alt": {
+      "en": "Two boxes of large, deep red Amaou strawberries",
+      "ja": "大粒で真っ赤なあまおうの箱ふたつ"
+    },
+    "author": "CoCreatr from Yokohama, Japan",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:%E5%8D%9A%E5%A4%9A%E3%81%82%E3%81%BE%E3%81%8A%E3%81%86_2%E5%80%8B%E3%82%BB%E3%83%83%E3%83%88_(2309459695).jpg"
+  },
+  "food/goma-saba": {
+    "alt": {
+      "en": "Slices of raw mackerel dressed in sesame and soy, with ginger and green onion",
+      "ja": "しょうがとねぎを添えた、ごまとしょうゆで和えた生の鯖"
+    },
+    "author": "ayustety from Tokyo, Japan",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:%E3%81%94%E3%81%BE%E3%81%95%E3%81%B0_(256930677).jpg"
+  },
+  "food/hakata-ramen": {
+    "alt": {
+      "en": "A bowl of milky tonkotsu ramen with nori, sliced pork and plenty of green onion",
+      "ja": "海苔とチャーシュー、たっぷりのねぎをのせた白濁した豚骨ラーメン"
+    },
+    "author": "Syced",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Tonkotsu_ramen_in_Tokyo.jpg"
+  },
+  "food/hakata-sweets": {
+    "alt": {
+      "en": "Two chick-shaped Hiyoko sweets on a dark dish",
+      "ja": "黒い器にのった、ひよこの形のお菓子ふたつ"
+    },
+    "author": "毒島みるく",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Hiyoko_on_a_dish.jpg"
+  },
+  "food/mentaiko": {
+    "alt": {
+      "en": "Whole sacs of bright red mentaiko on a blue-and-white plate",
+      "ja": "染付の皿に並んだ真っ赤な明太子"
+    },
+    "author": "Nissy-KITAQ",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Fukuya_mentaiko_Fukkoku.JPG"
+  },
+  "food/motsunabe": {
+    "alt": {
+      "en": "A pot of motsunabe topped with a heap of garlic chives over cabbage and offal",
+      "ja": "キャベツともつの上にたっぷりのにらをのせたもつ鍋"
+    },
+    "author": "Nesnad",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Motsunabe_Aug_13_2021_Ikebukuro-_two_views.jpeg"
+  },
+  "food/udon": {
+    "alt": {
+      "en": "Soft udon in clear broth topped with a tangle of crisp burdock tempura",
+      "ja": "澄んだつゆのやわらかいうどんに、ごぼう天をたっぷりのせて"
+    },
+    "author": "Kyoww",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Goboten-udon.jpg"
+  },
+  "food/yatai": {
+    "alt": {
+      "en": "Diners on folding stools at a yatai stall at night, under a red lantern",
+      "ja": "赤ちょうちんの下、折りたたみ椅子に座って屋台で食べる人たち"
+    },
+    "author": "Jacklee.",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Yatai_beside_Naka-gawa,_Fukuoka,_Japan_-_20110525-02.jpg"
+  },
+  "neighbourhoods/daimyo": {
+    "alt": {
+      "en": "A narrow street in Daimyo lined with small shops and low buildings",
+      "ja": "小さな店と低い建物が並ぶ大名の細い通り"
+    },
+    "author": "Hirho",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Daimy%C5%8D-ch%C5%AB%C5%8D_D%C5%8Dri_the_NNW_view_from_near_Shin-ganrin-no-ch%C5%8D_D%C5%8Dri_Daimy%C5%8D_2-ch%C5%8Dme_Ch%C5%AB%C5%8D-ku_Fukuoka_20250605.jpg"
+  },
+  "neighbourhoods/hakata": {
+    "alt": {
+      "en": "The long glass front of JR Hakata City, the station building, under a clear sky",
+      "ja": "晴れた空の下、ガラス張りの JR博多シティ（博多駅ビル）の正面"
+    },
+    "author": "ぱちょぴ",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:JR_Hakata_City_2011_Jan.jpg"
+  },
+  "neighbourhoods/kawabata": {
+    "alt": {
+      "en": "The arched entrance of the covered Kawabata shopping arcade",
+      "ja": "アーチ型の川端商店街の入口"
+    },
+    "author": "Hirho",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kawabata_Shopping_Arcade_the_NW_entrance_Kami-kawabatamachi_Hakata-ku_Fukuoka_20231120.jpg"
+  },
+  "neighbourhoods/momochi": {
+    "alt": {
+      "en": "Sunset over the calm water of Momochi beach, with waterfront towers in the distance",
+      "ja": "夕暮れの百道浜。穏やかな海と遠くの高層ビル"
+    },
+    "author": "Hirho",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Seaside_Momochi_Seaside_Park_W_from_Marizon_Momochi-hama_2-ch%C5%8Dme_Sawara-ku_Fukuoka_20240126.jpg"
+  },
+  "neighbourhoods/nakasu": {
+    "alt": {
+      "en": "Neon signs of Nakasu reflected in the river at night",
+      "ja": "夜の川面に映る中洲のネオン"
+    },
+    "author": "Yoshikazu TAKADA from Tokyo, Japan",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Nakasu_(20141188736).jpg"
+  },
+  "neighbourhoods/ohori": {
+    "alt": {
+      "en": "A still pond with rocks and pines in the Japanese garden at Ohori Park",
+      "ja": "岩と松が映る、大濠公園日本庭園の静かな池"
+    },
+    "author": "STA3816",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ohori_Park_2011-11_03.jpg"
+  },
+  "neighbourhoods/tenjin": {
+    "alt": {
+      "en": "A long, softly lit corridor of the Tenjin underground arcade with shopfronts on both sides",
+      "ja": "両側に店が並ぶ、やわらかな照明の天神地下街の長い通路"
+    },
+    "author": "JKT-c",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tenjin_Chikagai(Tenjin_Underground_City)_-_02.JPG"
+  },
+  "neighbourhoods/yakuin": {
+    "alt": {
+      "en": "The vermilion wooden gate of Kego Shrine",
+      "ja": "警固神社の朱塗りの木の神門"
+    },
+    "author": "Hirho",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kego_Shrine_the_outside_of_the_shinmon_Tenjin_2-ch%C5%8Dme_Ch%C5%AB%C5%8D-ku_Fukuoka_20231114.jpg"
+  },
+  "sights/art-museum": {
+    "alt": {
+      "en": "The red-brick terrace and steps outside Fukuoka Art Museum",
+      "ja": "福岡市美術館の赤れんがのテラスと階段"
+    },
+    "author": "Hirho",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Fukuoka_Art_Museum_The_outside_stairs_on_the_Esplanade_%C5%8Chorik%C5%8Den_Ch%C5%AB%C5%8D-ku_Fukuoka_20260611_165129.jpg"
+  },
+  "sights/canal-city": {
+    "alt": {
+      "en": "The curving canal at Canal City Hakata, with trees and terraces",
+      "ja": "木々とテラスに囲まれた、キャナルシティ博多の曲がった運河"
+    },
+    "author": "そらみみ",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Canal_City_Hakata_20170930.jpg"
+  },
+  "sights/fukuoka-tower": {
+    "alt": {
+      "en": "The mirrored Fukuoka Tower rising above the seaside park under a cloudy sky",
+      "ja": "曇り空の下、海辺の公園の上にそびえる鏡張りの福岡タワー"
+    },
+    "author": "Hirho",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:View_of_Fukuoka_Tower_from_Seaside_Momochi_Seaside_Park_area_around_902-1_Momochihama-2-ch%C5%8Dme_Sawara-ku_Fukuoka_City_20221213.jpg",
+    "focus": [
+      0.5,
+      0.3
+    ]
+  },
+  "sights/kushida": {
+    "alt": {
+      "en": "The gate of Kushida Shrine hung with paper lanterns",
+      "ja": "ちょうちんが並ぶ櫛田神社の門"
+    },
+    "author": "Nissy-KITAQ",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kushida_Jinja_Hakata_Okunchi.JPG"
+  },
+  "sights/maizuru": {
+    "alt": {
+      "en": "Cherry trees in bloom above the stone walls of the Fukuoka Castle ruins",
+      "ja": "福岡城跡の石垣の上に咲く桜"
+    },
+    "author": "そらみみ (Soramimi)",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cherry_blossom_and_stone_wall_of_Fukuoka_Castle_3.JPG"
+  },
+  "sights/nokonoshima": {
+    "alt": {
+      "en": "A field of yellow rapeseed flowers sloping towards the sea on Nokonoshima",
+      "ja": "海へと下る、能古島の菜の花畑"
+    },
+    "author": "そらみみ",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Shikanoshima_Island_and_canola_field_in_Nokonoshima_Island_Park_21.jpg"
+  },
+  "sights/ohori-park": {
+    "alt": {
+      "en": "A low bridge crossing the lake at Ohori Park between its islands",
+      "ja": "大濠公園の池にかかる、島をつなぐ低い橋"
+    },
+    "author": "そらみみ",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kangetsubashi_Bridge_in_Ohori_Park_4.jpg"
+  },
+  "sights/sumiyoshi": {
+    "alt": {
+      "en": "The vermilion worship hall of Sumiyoshi Shrine",
+      "ja": "住吉神社の朱塗りの拝殿"
+    },
+    "author": "そらみみ",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Haiden_of_Sumiyoshi_Shrine.JPG"
+  },
+  "sights/tochoji": {
+    "alt": {
+      "en": "A plum tree in blossom in front of the main hall of Tochoji Temple",
+      "ja": "東長寺の本堂の前で咲く梅"
+    },
+    "author": "そらみみ",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Plum_tree_in_Tochoji_Temple.jpg"
+  },
+  "sights/uminonakamichi": {
+    "alt": {
+      "en": "Beds of red and pink tulips in a garden at Uminonakamichi Seaside Park",
+      "ja": "海の中道海浜公園の花壇に咲く赤とピンクのチューリップ"
+    },
+    "author": "KimonBerlin",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Uminonakamichi_Seaside_Park_4-3_(27414498092).jpg"
+  }
+}

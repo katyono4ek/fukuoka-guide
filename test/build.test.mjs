@@ -6,7 +6,8 @@ import { join, dirname, resolve as resolvePath } from 'node:path';
 import { createHash } from 'node:crypto';
 import { build } from '../src/build.mjs';
 import { loadContent, sectionsFor, t } from '../src/content.mjs';
-import { renderPage } from '../src/templates.mjs';
+import { renderPage, esc } from '../src/templates.mjs';
+import { PHOTO_FORMATS, photoFormat, photoFile, webpSize } from '../src/photos.mjs';
 
 const ORIGIN = 'https://example.github.io';
 const BASE = '/fukuoka-roadmap';
@@ -32,6 +33,8 @@ test('every expected file is emitted', () => {
     'assets/theme.js',
     'assets/gate.js',
     'assets/favicon.svg',
+    'photos/hero-960.webp',
+    'photos/hero-1920.webp',
     'robots.txt',
     'sitemap.xml',
     '.nojekyll',
@@ -98,7 +101,10 @@ test('the Japanese page is Japanese and the English page has no stray Japanese',
   const cjk = /[\u3040-\u30ff\u4e00-\u9faf]/u;
   assert.ok(cjk.test(pages.ja), 'Japanese page contains Japanese');
 
-  const main = pages.en.slice(pages.en.indexOf('<main'), pages.en.indexOf('</main>'));
+  // Text explicitly marked lang="ja" (the decorative name on a photo-less card) is deliberate.
+  const main = pages.en
+    .slice(pages.en.indexOf('<main'), pages.en.indexOf('</main>'))
+    .replace(/<([a-z]+)[^>]*\slang="ja"[^>]*>[^<]*<\/\1>/g, '');
   const blocks = main.split('<section class="section" id="').slice(1);
   assert.equal(blocks.length, sectionsFor(content.sections, 'en').length);
   for (const block of blocks) {
@@ -305,7 +311,7 @@ test('hostile content is escaped, never injected', () => {
   poisoned.sections[1].items[0].map = 'Hakata" onmouseover="alert(1)';
   const html = renderPage(poisoned, 'en', { origin: ORIGIN, base: BASE });
   assert.ok(!html.includes(payload), 'the payload must not survive as markup');
-  assert.ok(!/<img/i.test(html), 'no img element may be injected');
+  assert.ok(!/<img src=x/i.test(html), 'no img element may be injected');
   assert.ok(
     !/<[a-z][^>]*\son[a-z]+\s*=/i.test(html),
     'no element may carry an inline event handler attribute',
@@ -335,6 +341,69 @@ test('the dark-mode toggle announces its state from the start', () => {
     assert.match(html, /data-theme-toggle[^>]*aria-pressed="false"/, 'toggle starts as a toggle button');
   }
   assert.match(app, /syncToggle\(\)/, 'app.js corrects aria-pressed to the real theme on load');
+});
+
+test('photos ship with exact dimensions, alt text and a srcset that resolves', () => {
+  for (const [locale, html] of Object.entries(pages)) {
+    const images = [...html.matchAll(/<img ([^>]*)>/g)].map((m) => m[1]);
+    assert.ok(images.length > 1, `${locale}: no photos rendered`);
+    for (const attrs of images) {
+      const attr = (name) => attrs.match(new RegExp(`(?:^|\\s)${name}="([^"]*)"`))?.[1];
+      const where = `${locale}: ${attr('src')}`;
+      assert.ok(attr('alt')?.trim(), `${where} has no alt text`);
+      const fileFor = (url) => resolvePath(join(outDir, locale), url);
+
+      // The width/height attributes reserve exactly the space the file needs.
+      const size = webpSize(readFileSync(fileFor(attr('src'))));
+      assert.equal(Number(attr('width')), size.width, `${where}: width attribute`);
+      assert.equal(Number(attr('height')), size.height, `${where}: height attribute`);
+
+      const candidates = attr('srcset').split(', ').map((entry) => entry.split(' '));
+      assert.ok(candidates.length >= 2, `${where}: srcset offers one size only`);
+      for (const [url, descriptor] of candidates) {
+        assert.ok(existsSync(fileFor(url)), `${where}: srcset points at missing ${url}`);
+        assert.equal(`${webpSize(readFileSync(fileFor(url))).width}w`, descriptor, `${where}: ${url} descriptor`);
+      }
+      assert.ok(attr('sizes'), `${where}: srcset without sizes`);
+
+      // The hero is above the fold; everything else waits until it is scrolled near.
+      const hero = attrs.includes('hero-photo');
+      assert.equal(attr('loading'), hero ? undefined : 'lazy', `${where}: loading`);
+    }
+  }
+});
+
+test('every photo is rendered and credited with author, licence and source', () => {
+  for (const [key, photo] of Object.entries(content.photos)) {
+    const sectionId = key.split('/')[0];
+    for (const [locale, html] of Object.entries(pages)) {
+      const section = content.sections.find((s) => s.id === sectionId);
+      if (section && !sectionsFor([section], locale).length) continue;
+      const files = PHOTO_FORMATS[photoFormat(key)].widths.map((w) => photoFile(key, w));
+      assert.ok(files.every((file) => html.includes(`../photos/${file}`)), `${locale}: ${key} is not shown`);
+      assert.equal(html.split(`src="../photos/${files[0]}"`).length - 1, 1, `${locale}: ${key} shown more than once`);
+
+      const credits = html.slice(html.indexOf('<details class="credits">'), html.indexOf('</details>'));
+      assert.ok(credits.includes(`href="${esc(photo.source)}"`), `${locale}: ${key} source not credited`);
+      assert.ok(credits.includes(esc(photo.author)), `${locale}: ${key} author not credited`);
+      assert.ok(credits.includes(esc(photo.license)), `${locale}: ${key} licence not credited`);
+      if (photo.licenseUrl) assert.ok(credits.includes(`href="${esc(photo.licenseUrl)}"`), `${locale}: ${key} licence link`);
+    }
+  }
+});
+
+test('a card without a photo in a photo section gets a decorative tile; other sections stay plain', () => {
+  for (const section of content.sections.filter((s) => s.layout === 'cards')) {
+    const withPhotos = section.items.filter((item) => content.photos[`${section.id}/${item.id}`]);
+    const block = pages.en.slice(pages.en.indexOf(`<section class="section" id="${section.id}"`));
+    const body = block.slice(0, block.indexOf('</section>'));
+    const tiles = (body.match(/class="card-photo card-tile" aria-hidden="true"/g) || []).length;
+    if (withPhotos.length === 0) {
+      assert.ok(!body.includes('card-photo'), `${section.id}: no photos, so no photo slots`);
+    } else {
+      assert.equal(tiles, section.items.length - withPhotos.length, `${section.id}: tiles fill the gaps`);
+    }
+  }
 });
 
 test('build reports what it produced', () => {
@@ -370,7 +439,8 @@ test('turning webfonts off removes every third-party request', () => {
   assert.match(csp, /style-src 'self';/);
   assert.match(csp, /font-src 'self';/);
 
-  const external = [...html.matchAll(/(?:href|src)="(https?:\/\/[^"]+)"/g)]
+  // Only what the browser fetches by itself counts; links the reader may follow do not.
+  const external = [...html.matchAll(/<(?:link|script|img|source)\s[^>]*(?:href|src|srcset)="(https?:\/\/[^"]+)"/g)]
     .map((m) => m[1])
     .filter((url) => !url.startsWith('https://www.google.com/maps') && !url.startsWith(ORIGIN));
   assert.deepEqual(external, [], 'no third-party resources may remain');

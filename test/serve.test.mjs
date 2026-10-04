@@ -58,6 +58,10 @@ test('assets load with the right content type', async () => {
   const icon = await get('/assets/favicon.svg');
   assert.equal(icon.status, 200);
   assert.match(icon.type, /image\/svg/);
+
+  const photo = await get('/photos/hero-960.webp');
+  assert.equal(photo.status, 200);
+  assert.equal(photo.type, 'image/webp');
 });
 
 test('an unknown path returns the 404 page', async () => {

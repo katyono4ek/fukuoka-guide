@@ -2,7 +2,7 @@ import { rmSync, mkdirSync, writeFileSync, copyFileSync, cpSync, readdirSync, ex
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { execFileSync } from 'node:child_process';
-import { loadContent, ROOT, sectionsFor } from './content.mjs';
+import { loadContent, ROOT, PHOTOS, sectionsFor } from './content.mjs';
 import { renderPage, renderIndex, renderNotFound } from './templates.mjs';
 
 const DIST = join(ROOT, 'dist');
@@ -64,6 +64,15 @@ export function build({
   for (const file of readdirSync(ASSETS)) {
     copyFileSync(join(ASSETS, file), join(outDir, 'assets', file));
     written.push(`assets/${file}`);
+  }
+
+  // Photos are pre-processed by tools/photo.mjs; the build only copies them.
+  if (existsSync(PHOTOS)) {
+    mkdirSync(join(outDir, 'photos'), { recursive: true });
+    for (const file of readdirSync(PHOTOS).filter((name) => name.endsWith('.webp'))) {
+      copyFileSync(join(PHOTOS, file), join(outDir, 'photos', file));
+      written.push(`photos/${file}`);
+    }
   }
 
   // Anything in public/ is copied verbatim: CNAME for a custom domain,

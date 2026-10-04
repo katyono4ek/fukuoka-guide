@@ -1,6 +1,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { loadContent, validate, t, sectionsFor } from '../src/content.mjs';
+import { readdirSync } from 'node:fs';
+import { loadContent, validate, t, sectionsFor, PHOTOS } from '../src/content.mjs';
+import { PHOTO_FORMATS, photoFormat, photoFile } from '../src/photos.mjs';
 
 const content = loadContent();
 const clone = () => structuredClone(content);
@@ -72,6 +74,50 @@ test('validation catches a timeline item with no steps', () => {
   const timeline = broken.sections.find((s) => s.layout === 'timeline');
   delete timeline.items[0].steps;
   assert.match(validate(broken).join(), /timeline items need steps/);
+});
+
+test('validation catches a photo for an item that does not exist', () => {
+  const broken = clone();
+  broken.photos['food/takoyaki'] = broken.photos['food/yatai'];
+  assert.match(validate(broken).join(), /no item "takoyaki" in a section "food"/);
+});
+
+test('validation catches photo alt text missing a translation', () => {
+  const broken = clone();
+  delete broken.photos.hero.alt.ja;
+  assert.match(validate(broken).join(), /photos\.json#hero\.alt: missing "ja" translation/);
+});
+
+test('validation insists on credit fields and https links', () => {
+  const broken = clone();
+  broken.photos.hero.author = ' ';
+  broken.photos['food/yatai'].source = 'javascript:alert(1)';
+  delete broken.photos['food/udon'].license;
+  const problems = validate(broken).join('\n');
+  assert.match(problems, /#hero: author is required/);
+  assert.match(problems, /#food\/yatai: source must be an https URL/);
+  assert.match(problems, /#food\/udon: license is required/);
+});
+
+test('validation catches a photo whose files were never generated', () => {
+  const broken = clone();
+  const [section] = broken.sections.filter((s) => s.layout === 'cards' && s.id === 'cafes');
+  broken.photos[`cafes/${section.items[0].id}`] = { ...broken.photos.hero };
+  assert.match(validate(broken).join(), /missing content\/photos\/cafes-.*-640\.webp/);
+});
+
+test('validation refuses photos on layouts that do not show them', () => {
+  const broken = clone();
+  const notes = broken.sections.find((s) => s.layout === 'notes');
+  broken.photos[`${notes.id}/${notes.items[0].id}`] = broken.photos.hero;
+  assert.match(validate(broken).join(), /photos are only shown on cards layouts/);
+});
+
+test('content/photos holds exactly the files the manifest needs', () => {
+  const expected = Object.keys(content.photos)
+    .flatMap((key) => PHOTO_FORMATS[photoFormat(key)].widths.map((width) => photoFile(key, width)))
+    .sort();
+  assert.deepEqual(readdirSync(PHOTOS).sort(), expected, 'remove orphaned photos or add them to photos.json');
 });
 
 test('loadContent throws rather than emitting a half-translated site', () => {
